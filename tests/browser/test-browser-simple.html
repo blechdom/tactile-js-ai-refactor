@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Browser Test - Tactile-JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .success { color: #28a745; font-weight: bold; }
+        .error { color: #dc3545; font-weight: bold; }
+        .info { color: #17a2b8; }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Simple Browser Test - Tactile-JS Safe Refactor</h1>
+        <p class="info">Testing basic functionality of the extracted data structures.</p>
+        
+        <button onclick="runTest()" id="testBtn">Run Test</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <script type="module">
+        // Test the basic imports and functionality
+        async function testBasicFunctionality() {
+            const results = [];
+            
+            try {
+                // Test 1: Import EdgeShape constants
+                const { EdgeShape } = await import('../../lib/constants/EdgeShape.js');
+                results.push({ message: '✅ Successfully imported EdgeShape constants', type: 'success' });
+                results.push({ message: `Available edge shapes: ${Object.keys(EdgeShape).join(', ')}`, type: 'info' });
+                
+                // Test 2: Import TilingDataLoader
+                const { TilingDataLoader } = await import('../../lib/data/TilingDataLoader.js');
+                results.push({ message: '✅ Successfully imported TilingDataLoader', type: 'success' });
+                
+                // Test 3: Create and initialize loader
+                const loader = new TilingDataLoader();
+                results.push({ message: '✅ Created TilingDataLoader instance', type: 'success' });
+                
+                await loader.initialize();
+                results.push({ message: '✅ Initialized TilingDataLoader', type: 'success' });
+                
+                // Test 4: Get statistics
+                const stats = loader.getStatistics();
+                results.push({ message: `✅ Retrieved statistics: ${stats.totalTilingTypes} tiling types loaded`, type: 'success' });
+                
+                // Test 5: Get a specific tiling type
+                const type1 = loader.getTilingType(1);
+                if (type1) {
+                    results.push({ message: `✅ Retrieved tiling type 1: ${type1.name}`, type: 'success' });
+                    results.push({ message: `   - Parameters: ${type1.getParameterCount()}`, type: 'info' });
+                    results.push({ message: `   - Vertices: ${type1.getVertexCount()}`, type: 'info' });
+                    results.push({ message: `   - Aspects: ${type1.getAspectCount()}`, type: 'info' });
+                } else {
+                    results.push({ message: '❌ Failed to retrieve tiling type 1', type: 'error' });
+                }
+                
+                // Test 6: Get all tiling types
+                const allTypes = loader.getAllTilingTypes();
+                results.push({ message: `✅ Retrieved all tiling types: ${allTypes.length} total`, type: 'success' });
+                
+                // Test 7: Show sample of tiling types
+                const sampleTypes = allTypes.slice(0, 5);
+                results.push({ message: 'Sample tiling types:', type: 'info' });
+                sampleTypes.forEach(type => {
+                    results.push({ 
+                        message: `   - ${type.name}: ${type.getParameterCount()} params, ${type.getVertexCount()} vertices`, 
+                        type: 'info' 
+                    });
+                });
+                
+                results.push({ message: '🎉 All tests completed successfully!', type: 'success' });
+                
+            } catch (error) {
+                results.push({ message: `❌ Test failed: ${error.message}`, type: 'error' });
+                console.error('Test error:', error);
+            }
+            
+            return results;
+        }
+
+        // Make the test function available globally
+        window.runTest = async function() {
+            const resultsDiv = document.getElementById('results');
+            const testBtn = document.getElementById('testBtn');
+            
+            testBtn.disabled = true;
+            testBtn.textContent = 'Running...';
+            resultsDiv.innerHTML = '<p>Running tests...</p>';
+            
+            try {
+                const results = await testBasicFunctionality();
+                
+                resultsDiv.innerHTML = `
+                    <h3>Test Results</h3>
+                    ${results.map(result => `
+                        <div class="${result.type}">
+                            ${result.message}
+                        </div>
+                    `).join('')}
+                `;
+                
+            } catch (error) {
+                resultsDiv.innerHTML = `
+                    <div class="error">
+                        ❌ Test execution failed: ${error.message}
+                    </div>
+                    <pre>${error.stack}</pre>
+                `;
+            } finally {
+                testBtn.disabled = false;
+                testBtn.textContent = 'Run Test Again';
+            }
+        };
+
+        // Auto-run test on page load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                window.runTest();
+            }, 500);
+        });
+    </script>
+</body>
+</html>

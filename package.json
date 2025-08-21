@@ -1,0 +1,22 @@
+{
+  "name": "tactile-js-safe-refactor",
+  "version": "1.0.0",
+  "description": "Safe refactoring environment for Tactile-JS library",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/node/test-data-loader.js",
+    "test:browser": "python3 tests/browser/serve.py",
+    "test:browser:node": "node tests/browser/serve-test.js",
+    "extract": "node tests/node/extract-data-final.js",
+    "verify": "node tests/node/verify-data-extraction.js"
+  },
+  "keywords": [
+    "tiles",
+    "tiling",
+    "geometry",
+    "isohedral",
+    "refactoring"
+  ],
+  "author": "Tactile-JS Refactoring Team",
+  "license": "SEE LICENSE IN LICENSE"
+}

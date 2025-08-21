@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Refactored Library Compatibility Test</title>
+    <style>
+        body { font-family: monospace; margin: 20px; }
+        .results { background: #f5f5f5; padding: 10px; border-radius: 3px; max-height: 400px; overflow-y: auto; }
+        .success { color: green; }
+        .error { color: red; }
+        .info { color: blue; }
+        .warning { color: orange; }
+        button { margin: 5px; padding: 8px 15px; background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; }
+        .test-section { margin: 15px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        .comparison { background: #fff; padding: 10px; margin: 10px 0; border-radius: 3px; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Refactored Library Compatibility Test</h1>
+    
+    <div class="test-section">
+        <h3>📋 Test Suite for Refactored Library</h3>
+        <p>This tests that our refactored library maintains 100% compatibility with the original.</p>
+        
+        <button onclick="testBasicCompatibility()">🔍 Test Basic Compatibility</button>
+        <button onclick="testDataIntegrity()">📊 Test Data Integrity</button>
+        <button onclick="testAPICompatibility()">🔌 Test API Compatibility</button>
+        <button onclick="runAllCompatibilityTests()">🚀 Run All Compatibility Tests</button>
+        <button onclick="clearResults()">🗑️ Clear Results</button>
+    </div>
+    
+    <div id="results" class="results"></div>
+
+    <script type="module">
+        // Import both libraries for comparison
+        import { IsohedralTiling as OriginalIsohedralTiling, EdgeShape as OriginalEdgeShape, tilingTypes as OriginalTilingTypes } from './lib/tactile.js';
+        import { IsohedralTiling as RefactoredIsohedralTiling, EdgeShape as RefactoredEdgeShape, tilingTypes as RefactoredTilingTypes, EnhancedTilingTypeRegistry } from './lib/tactile-refactored.js';
+        
+        let testResults = {};
+        
+        function log(message, type = 'info') {
+            const resultsDiv = document.getElementById('results');
+            const color = type === 'error' ? 'red' : type === 'success' ? 'green' : type === 'warning' ? 'orange' : 'blue';
+            resultsDiv.innerHTML += `<div style="color: ${color}">${message}</div>`;
+            resultsDiv.scrollTop = resultsDiv.scrollHeight;
+        }
+        
+        function clearResults() {
+            document.getElementById('results').innerHTML = '';
+            testResults = {};
+        }
+        
+        // Test 1: Basic Compatibility
+        function testBasicCompatibility() {
+            log('🔍 Testing basic compatibility...', 'info');
+            
+            try {
+                // Test constants
+                if (JSON.stringify(OriginalEdgeShape) === JSON.stringify(RefactoredEdgeShape)) {
+                    log('✅ EdgeShape constants match exactly', 'success');
+                } else {
+                    log('❌ EdgeShape constants do not match', 'error');
+                }
+                
+                if (JSON.stringify(OriginalTilingTypes) === JSON.stringify(RefactoredTilingTypes)) {
+                    log('✅ TilingTypes arrays match exactly', 'success');
+                } else {
+                    log('❌ TilingTypes arrays do not match', 'error');
+                }
+                
+                // Test basic instantiation
+                const originalTiling = new OriginalIsohedralTiling(1);
+                const refactoredTiling = new RefactoredIsohedralTiling(1);
+                
+                log('✅ Both libraries can instantiate tiling type 1', 'success');
+                
+                // Compare basic properties
+                if (originalTiling.numParameters() === refactoredTiling.numParameters()) {
+                    log('✅ Parameter counts match', 'success');
+                } else {
+                    log('❌ Parameter counts do not match', 'error');
+                }
+                
+                if (originalTiling.numVertices() === refactoredTiling.numVertices()) {
+                    log('✅ Vertex counts match', 'success');
+                } else {
+                    log('❌ Vertex counts do not match', 'error');
+                }
+                
+                if (originalTiling.numAspects() === refactoredTiling.numAspects()) {
+                    log('✅ Aspect counts match', 'success');
+                } else {
+                    log('❌ Aspect counts do not match', 'error');
+                }
+                
+                if (originalTiling.numEdgeShapes() === refactoredTiling.numEdgeShapes()) {
+                    log('✅ Edge shape counts match', 'success');
+                } else {
+                    log('❌ Edge shape counts do not match', 'error');
+                }
+                
+            } catch (error) {
+                log(`❌ Basic compatibility test failed: ${error.message}`, 'error');
+            }
+        }
+        
+        // Test 2: Data Integrity
+        function testDataIntegrity() {
+            log('📊 Testing data integrity...', 'info');
+            
+            try {
+                let integrityIssues = 0;
+                const testTypes = [1, 2, 3, 4, 5]; // Test first 5 types
+                
+                testTypes.forEach(typeId => {
+                    try {
+                        const originalTiling = new OriginalIsohedralTiling(typeId);
+                        const refactoredTiling = new RefactoredIsohedralTiling(typeId);
+                        
+                        // Compare all properties
+                        if (originalTiling.numParameters() !== refactoredTiling.numParameters()) {
+                            log(`❌ Type ${typeId}: Parameter count mismatch`, 'error');
+                            integrityIssues++;
+                        }
+                        
+                        if (originalTiling.numVertices() !== refactoredTiling.numVertices()) {
+                            log(`❌ Type ${typeId}: Vertex count mismatch`, 'error');
+                            integrityIssues++;
+                        }
+                        
+                        if (originalTiling.numAspects() !== refactoredTiling.numAspects()) {
+                            log(`❌ Type ${typeId}: Aspect count mismatch`, 'error');
+                            integrityIssues++;
+                        }
+                        
+                        if (originalTiling.numEdgeShapes() !== refactoredTiling.numEdgeShapes()) {
+                            log(`❌ Type ${typeId}: Edge shape count mismatch`, 'error');
+                            integrityIssues++;
+                        }
+                        
+                        // Compare edge shapes
+                        for (let i = 0; i < originalTiling.numEdgeShapes(); i++) {
+                            if (originalTiling.getEdgeShape(i) !== refactoredTiling.getEdgeShape(i)) {
+                                log(`❌ Type ${typeId}: Edge shape ${i} mismatch`, 'error');
+                                integrityIssues++;
+                            }
+                        }
+                        
+                        // Compare parameters
+                        const originalParams = originalTiling.getParameters();
+                        const refactoredParams = refactoredTiling.getParameters();
+                        
+                        if (originalParams.length !== refactoredParams.length) {
+                            log(`❌ Type ${typeId}: Parameter array length mismatch`, 'error');
+                            integrityIssues++;
+                        } else {
+                            for (let i = 0; i < originalParams.length; i++) {
+                                if (Math.abs(originalParams[i] - refactoredParams[i]) > 1e-10) {
+                                    log(`❌ Type ${typeId}: Parameter ${i} value mismatch`, 'error');
+                                    integrityIssues++;
+                                }
+                            }
+                        }
+                        
+                        if (integrityIssues === 0) {
+                            log(`✅ Type ${typeId}: All data integrity checks passed`, 'success');
+                        }
+                        
+                    } catch (error) {
+                        log(`❌ Type ${typeId}: Error during integrity check - ${error.message}`, 'error');
+                        integrityIssues++;
+                    }
+                });
+                
+                if (integrityIssues === 0) {
+                    log('🎉 All data integrity checks passed!', 'success');
+                } else {
+                    log(`⚠️ Found ${integrityIssues} data integrity issues`, 'warning');
+                }
+                
+            } catch (error) {
+                log(`❌ Data integrity test failed: ${error.message}`, 'error');
+            }
+        }
+        
+        // Test 3: API Compatibility
+        function testAPICompatibility() {
+            log('🔌 Testing API compatibility...', 'info');
+            
+            try {
+                // Test that all expected methods exist
+                const originalTiling = new OriginalIsohedralTiling(1);
+                const refactoredTiling = new RefactoredIsohedralTiling(1);
+                
+                const requiredMethods = [
+                    'numParameters', 'numAspects', 'numVertices', 'numEdgeShapes',
+                    'getParameters', 'setParameters', 'getT1', 'getT2', 'getEdgeShape'
+                ];
+                
+                let missingMethods = 0;
+                
+                requiredMethods.forEach(methodName => {
+                    if (typeof refactoredTiling[methodName] !== 'function') {
+                        log(`❌ Missing method: ${methodName}`, 'error');
+                        missingMethods++;
+                    }
+                });
+                
+                if (missingMethods === 0) {
+                    log('✅ All required methods are present', 'success');
+                }
+                
+                // Test method behavior
+                try {
+                    const params = refactoredTiling.getParameters();
+                    refactoredTiling.setParameters(params);
+                    log('✅ Parameter getter/setter works correctly', 'success');
+                } catch (error) {
+                    log(`❌ Parameter getter/setter failed: ${error.message}`, 'error');
+                }
+                
+                // Test edge shape access
+                try {
+                    const edgeShape = refactoredTiling.getEdgeShape(0);
+                    if (edgeShape !== undefined) {
+                        log('✅ Edge shape access works correctly', 'success');
+                    } else {
+                        log('❌ Edge shape access returned undefined', 'error');
+                    }
+                } catch (error) {
+                    log(`❌ Edge shape access failed: ${error.message}`, 'error');
+                }
+                
+            } catch (error) {
+                log(`❌ API compatibility test failed: ${error.message}`, 'error');
+            }
+        }
+        
+        // Test 4: Run All Tests
+        function runAllCompatibilityTests() {
+            clearResults();
+            log('🚀 Running all compatibility tests...', 'info');
+            
+            setTimeout(() => {
+                testBasicCompatibility();
+                setTimeout(() => {
+                    testDataIntegrity();
+                    setTimeout(() => {
+                        testAPICompatibility();
+                        log('🎯 All compatibility tests completed!', 'info');
+                    }, 500);
+                }, 500);
+            }, 500);
+        }
+        
+        // Make functions globally available BEFORE the window.onload
+        window.testBasicCompatibility = testBasicCompatibility;
+        window.testDataIntegrity = testDataIntegrity;
+        window.testAPICompatibility = testAPICompatibility;
+        window.runAllCompatibilityTests = runAllCompatibilityTests;
+        window.clearResults = clearResults;
+        
+        // Auto-run basic test on page load
+        window.onload = function() {
+            log('🧪 Refactored library compatibility test environment loaded!', 'info');
+            log('🔍 This will ensure our refactored library works exactly like the original.', 'info');
+            log('🚀 Click "Run All Compatibility Tests" to begin validation.', 'info');
+        };
+    </script>
+</body>
+</html>

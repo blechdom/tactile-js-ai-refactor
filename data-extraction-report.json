@@ -1,0 +1,94 @@
+{
+  "timestamp": "2025-08-20T19:10:48.666Z",
+  "verification": {
+    "success": false,
+    "errors": [
+      "Mismatch in edge shape counts: 38 vs 30"
+    ],
+    "warnings": [
+      "Gap in edge shape numbering: 1 to 10",
+      "Gap in edge shape numbering: 2 to 20",
+      "Gap in edge shape numbering: 3 to 30"
+    ],
+    "counts": {
+      "edgeShapes": 38,
+      "edgeShapeIds": 30,
+      "edgeOrientations": 45,
+      "defaultParams": 33,
+      "vertexCoeffs": 43,
+      "translationCoeffs": 62,
+      "aspectCoeffs": 65,
+      "coloring": 29
+    }
+  },
+  "extractedData": {
+    "counts": {
+      "edgeShapes": 38,
+      "edgeShapeIds": 30,
+      "edgeOrientations": 45,
+      "defaultParams": 33,
+      "vertexCoeffs": 43,
+      "translationCoeffs": 62,
+      "aspectCoeffs": 65,
+      "coloring": 29
+    },
+    "sampleData": {
+      "edgeShapes": [
+        "es_00",
+        "es_01",
+        "es_02",
+        "es_03",
+        "es_04"
+      ],
+      "edgeShapeIds": [
+        "esi_00",
+        "esi_01",
+        "esi_02",
+        "esi_03",
+        "esi_04"
+      ],
+      "edgeOrientations": [
+        "eo_00",
+        "eo_01",
+        "eo_02",
+        "eo_03",
+        "eo_04"
+      ],
+      "defaultParams": [
+        "dp_00",
+        "dp_01",
+        "dp_02",
+        "dp_03",
+        "dp_04"
+      ],
+      "vertexCoeffs": [
+        "tvc_00",
+        "tvc_01",
+        "tvc_02",
+        "tvc_03",
+        "tvc_04"
+      ],
+      "translationCoeffs": [
+        "tc_00",
+        "tc_01",
+        "tc_02",
+        "tc_03",
+        "tc_04"
+      ],
+      "aspectCoeffs": [
+        "ac_00",
+        "ac_01",
+        "ac_02",
+        "ac_03",
+        "ac_04"
+      ],
+      "coloring": [
+        "c_00",
+        "c_01",
+        "c_02",
+        "c_03",
+        "c_04"
+      ]
+    }
+  }
+}
