@@ -167,7 +167,7 @@ function auditTilingTypes() {
         });
         
         // Save detailed report
-        fs.writeFileSync('tiling-data-audit-report.json', JSON.stringify({
+        fs.writeFileSync('reports/tiling-data-audit-report.json', JSON.stringify({
             timestamp: new Date().toISOString(),
             summary: {
                 total_checked: 81,
@@ -178,7 +178,7 @@ function auditTilingTypes() {
         }, null, 2));
         
         console.log('');
-        console.log('💾 Detailed report saved to: tiling-data-audit-report.json');
+        console.log('💾 Detailed report saved to: reports/tiling-data-audit-report.json');
     } else {
         console.log('🎉 All tiling types are consistent!');
     }

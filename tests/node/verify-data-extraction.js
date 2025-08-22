@@ -197,7 +197,7 @@ function checkArrayIntegrity(content, prefix) {
 const verification = verifyDataExtraction();
 
 // Write verification report
-const reportFile = path.join(__dirname, '..', '..', 'verification-report.json');
+const reportFile = path.join(__dirname, '..', '..', 'reports', 'verification-report.json');
 const report = {
     timestamp: new Date().toISOString(),
     verification,

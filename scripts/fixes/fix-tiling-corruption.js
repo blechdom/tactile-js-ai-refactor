@@ -13,7 +13,7 @@ const BACKUP_DIR = 'backups';
 const TIMESTAMP = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
 
 // Read the audit report to know which types to fix
-const auditReport = JSON.parse(fs.readFileSync('tiling-data-audit-report.json', 'utf8'));
+const auditReport = JSON.parse(fs.readFileSync('reports/tiling-data-audit-report.json', 'utf8'));
 
 // Read source files
 const tactileJs = fs.readFileSync('lib/tactile.js', 'utf8');

@@ -48,7 +48,7 @@ All your progress is safely preserved:
    - ✅ Original corrupted tactile.js (pre-fix)
    - ✅ Multiple backup timestamps
 
-3. **`tiling-data-audit-report.json`**
+3. **`reports/tiling-data-audit-report.json`**
    - ✅ Complete audit of all 81 tiling types
    - ✅ Detailed corruption analysis
 

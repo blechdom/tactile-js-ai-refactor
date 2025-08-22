@@ -42,8 +42,8 @@ This document summarizes the complete data extraction process from the original 
   - Tiling type definitions mapping
 
 ### **2. Verification Reports**
-- **Data Extraction Report**: `data-extraction-report-final.json`
-- **Verification Report**: `verification-report.json`
+- **Data Extraction Report**: `reports/data-extraction-report-final.json`
+- **Verification Report**: `reports/verification-report.json`
 - **Comprehensive validation of data integrity**
 
 ### **3. Extraction Scripts**

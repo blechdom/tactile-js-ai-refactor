@@ -327,7 +327,7 @@ const outputFile = path.join(__dirname, '..', '..', 'lib', 'data', 'TilingData.j
 fs.writeFileSync(outputFile, tilingDataContent);
 
 // Write verification report
-const reportFile = path.join(__dirname, '..', '..', 'data-extraction-report-final.json');
+const reportFile = path.join(__dirname, '..', '..', 'reports', 'data-extraction-report-final.json');
 const report = {
     timestamp: new Date().toISOString(),
     verification,
