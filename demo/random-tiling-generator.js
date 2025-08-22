@@ -454,7 +454,7 @@ let sktch = function( p5c )
 		// Only animate if animation is enabled
 		if (animationEnabled) {
 			cur_tiling.tx += cur_tiling.dx / p5c.width;
-		cur_tiling.ty += cur_tiling.dy / p5c.height;
+			cur_tiling.ty += cur_tiling.dy / p5c.height;
 		}
 	}
 
