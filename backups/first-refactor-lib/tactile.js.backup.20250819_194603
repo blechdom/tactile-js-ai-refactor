@@ -8,10 +8,43 @@
 
 'use strict'
 
-// Import shared utilities and constants
-import { EdgeShape } from './constants/EdgeShape.js';
-import { tilingTypes, numTypes } from './constants/TilingTypes.js';
-import { mul, matchSeg } from './utils/MathUtils.js';
+const EdgeShape = {
+	J : 10001,
+	U : 10002,
+	S : 10003,
+	I : 10004,
+};
+
+const numTypes = 81;
+
+function mul( A, B ) 
+{
+	if( B.hasOwnProperty( 'x' ) ) {
+		// Matrix * Point
+		return { 
+			x : A[0]*B.x + A[1]*B.y + A[2],
+			y : A[3]*B.x + A[4]*B.y + A[5] };
+	} else {
+		// Matrix * Matrix
+		return [A[0]*B[0] + A[1]*B[3], 
+			A[0]*B[1] + A[1]*B[4],
+			A[0]*B[2] + A[1]*B[5] + A[2],
+
+			A[3]*B[0] + A[4]*B[3], 
+			A[3]*B[1] + A[4]*B[4],
+			A[3]*B[2] + A[4]*B[5] + A[5]];
+	}
+};
+
+function matchSeg( p, q )
+{
+	return [q.x-p.x, p.y-q.y, p.x,  q.y-p.y, q.x-p.x, p.y];
+};
+'use strict'
+
+const tilingTypes = [
+	1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 61, 62, 64, 66, 67, 68, 69, 71, 72, 73, 74, 76, 77, 78, 79, 81, 82, 83, 84, 85, 86, 88, 90, 91, 93
+];
 
 
 const tiling_type_data = (function() {
