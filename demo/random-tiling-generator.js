@@ -443,7 +443,7 @@ let sktch = function( p5c )
 				animationEnabled = this.checked;
 			});
 		}
-	}
+	};
 
 	p5c.draw = function()
 	{
@@ -456,7 +456,7 @@ let sktch = function( p5c )
 			cur_tiling.tx += cur_tiling.dx / p5c.width;
 			cur_tiling.ty += cur_tiling.dy / p5c.height;
 		}
-	}
+	};
 
 	p5c.mousePressed = function()
 	{
@@ -466,7 +466,6 @@ let sktch = function( p5c )
 			cur_tiling = createRandomTiling();
 			displayTilingInfo( cur_tiling );
 		}
-	}
-};
+	};
 
 let myp5 = new p5( sktch, 'sktch' );
