@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactile-JS AI Refactor - Demos</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            color: #4a5568;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            margin-bottom: 40px;
+            font-size: 1.2em;
+        }
+        .stats {
+            background: #f7fafc;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .stat-item {
+            display: inline-block;
+            margin: 0 20px;
+            padding: 10px;
+        }
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #4299e1;
+            display: block;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .demo-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 4px solid #4299e1;
+        }
+        .demo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        .demo-card h3 {
+            margin-top: 0;
+            color: #2d3748;
+            font-size: 1.3em;
+        }
+        .demo-card p {
+            color: #4a5568;
+            margin: 10px 0;
+        }
+        .demo-link {
+            display: inline-block;
+            background: #4299e1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .demo-link:hover {
+            background: #3182ce;
+        }
+        .archive-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .archive-section h2 {
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+        .archive-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .archive-link {
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9em;
+            transition: background 0.2s;
+        }
+        .archive-link:hover {
+            background: #e2e8f0;
+        }
+        .github-badge {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .github-badge a {
+            background: #24292e;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .github-badge a:hover {
+            background: #1b1f23;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Tactile-JS AI Refactor</h1>
+        <p class="subtitle">Interactive Isohedral Tiling Demonstrations</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">81%</span>
+                <span>Code Reduction</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">425</span>
+                <span>Lines (vs 2,223)</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">81</span>
+                <span>Tiling Types</span>
+            </div>
+        </div>
+
+        <div class="demo-grid">
+            <div class="demo-card">
+                <h3>🎯 Interactive Demo</h3>
+                <p>Full-featured interactive tiling editor with parameter controls, shape manipulation, and real-time rendering.</p>
+                <a href="demo/interactivedemo.html" class="demo-link">Launch Demo</a>
+            </div>
+
+            <div class="demo-card">
+                <h3>🎲 Random Tiling Generator</h3>
+                <p>Generate random tilings with customizable parameters. Perfect for exploring the vast space of isohedral patterns.</p>
+                <a href="demo/random-tiling-generator.html" class="demo-link">Launch Demo</a>
+            </div>
+
+            <div class="demo-card">
+                <h3>🎪 Minimal Demo</h3>
+                <p>A clean, minimal demonstration of the core tiling functionality. Great for understanding the basics.</p>
+                <a href="demo/minimaldemo.html" class="demo-link">Launch Demo</a>
+            </div>
+
+            <div class="demo-card">
+                <h3>📱 Touch Demo</h3>
+                <p>Mobile-friendly touch interface for creating and manipulating tilings on tablets and smartphones.</p>
+                <a href="demo/touchdemo.html" class="demo-link">Launch Demo</a>
+            </div>
+        </div>
+
+        <div class="github-badge">
+            <a href="https://github.com/blechdom/tactile-js-ai-refactor">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                View Source on GitHub
+            </a>
+        </div>
+
+        <div class="archive-section">
+            <h2>📁 Archived Demos</h2>
+            <div class="archive-links">
+                <a href="demo/archive/working-demo.html" class="archive-link">Working Demo</a>
+                <a href="demo/archive/proper-demo.html" class="archive-link">Proper Demo</a>
+                <a href="demo/archive/full-tiling-demo.html" class="archive-link">Full Tiling Demo</a>
+                <a href="demo/archive/simple-demo.html" class="archive-link">Simple Demo</a>
+                <a href="demo/archive/advanced-demo.html" class="archive-link">Advanced Demo</a>
+            </div>
+        </div>
+
+        <div class="archive-section">
+            <h2>🧪 Test Files</h2>
+            <div class="archive-links">
+                <a href="tests/browser/run-browser-test.html" class="archive-link">Browser Tests</a>
+                <a href="tests/browser/test-browser-simple.html" class="archive-link">Simple Browser Test</a>
+                <a href="tests/browser/test-browser.html" class="archive-link">Full Browser Test</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
