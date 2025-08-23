@@ -16,7 +16,7 @@ async function testTilingDataLoader() {
     try {
         // Test 1: Initialize the loader
         console.log('1. Initializing TilingDataLoader...');
-        await loader.initialize();
+        loader.initialize();
         console.log('✅ Initialization successful\n');
 
         // Test 2: Get statistics
