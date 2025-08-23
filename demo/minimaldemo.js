@@ -12,8 +12,9 @@
 
 'use strict'
 
-import { mul, EdgeShape, tilingTypes, IsohedralTiling } 
-	from '../lib/tactile.js';
+import { EdgeShape } from '../lib/constants/EdgeShape.js';
+import { tilingTypes } from '../lib/constants/TilingTypes.js';
+import { IsohedralTiling, mul } from '../lib/core/IsohedralTiling.js';
 
 function drawRandomTiling()
 {
@@ -51,6 +52,11 @@ function drawRandomTiling()
 
 			if( si.shape != EdgeShape.I ) {
 				const ej = edges[ si.id ];
+				console.log(`Drawing edge with si.id=${si.id}, si.shape=${si.shape}, ej=`, ej);
+				if (!ej) {
+					console.error(`ERROR: No edge data for si.id=${si.id}. edges.length=${edges.length}`);
+					continue;
+				}
 				seg.push( mul( S, ej[0] ) );
 				seg.push( mul( S, ej[1] ) );
 			}
@@ -85,7 +91,20 @@ function drawRandomTiling()
 function makeRandomTiling()
 {
 	// Construct a tiling
-	const tp = tilingTypes[ Math.floor( 81 * Math.random() ) ];
+	const tilingTypeIndex = Math.floor( tilingTypes.length * Math.random() );
+	const tp = tilingTypes[ tilingTypeIndex ];
+	
+	// Add logging to help debug issues
+	console.log('Selected tiling type index:', tilingTypeIndex);
+	console.log('Tiling types array length:', tilingTypes.length);
+	console.log('Selected tiling type:', tp);
+	
+	if (!tp) {
+		console.error('ERROR: Tiling type is undefined for index', tilingTypeIndex);
+		console.log('Available indices:', tilingTypes.map((val, idx) => ({ idx, val })));
+		throw new Error(`Invalid tiling type at index ${tilingTypeIndex}`);
+	}
+	
 	let tiling = new IsohedralTiling( tp );
 
 	// Randomize the tiling vertex parameters
@@ -101,11 +120,15 @@ function makeRandomTiling()
 	// Bezier control points that have all necessary symmetries.
 
 	let edges = [];
+	console.log('Creating edges for', tiling.numEdgeShapes(), 'edge shapes');
+	
 	for( let i = 0; i < tiling.numEdgeShapes(); ++i ) {
 		let ej = [];
 		const shp = tiling.getEdgeShape( i );
+		console.log(`Edge ${i}: shape type ${shp}`);
+		
 		if( shp == EdgeShape.I ) {
-			// Pass
+			// Pass - straight edge needs no control points
 		} else if( shp == EdgeShape.J ) {
 			ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
 			ej.push( { x: Math.random()*0.6 + 0.4, y : Math.random() - 0.5 } );
@@ -118,7 +141,10 @@ function makeRandomTiling()
 		}
 
 		edges.push( ej );
+		console.log(`Edge ${i}: created with ${ej.length} control points`);
 	}
+	
+	console.log('Total edges created:', edges.length);
 
 	return { tiling: tiling, edges: edges }
 }

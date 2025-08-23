@@ -6,11 +6,18 @@
  * file "LICENSE" for more information.
  */
 
+console.log('[Random Generator] Module loading...');
+
 import { mul, matchSeg, EdgeShape, numTypes, tilingTypes, IsohedralTiling } 
 	from '../lib/tactile.js';
+	
+console.log('[Random Generator] Imports loaded successfully');
 
 let sktch = function( p5c )
 {
+	console.log('[Random Generator] sktch function called with p5c:', p5c);
+	console.log('[Random Generator] p5c type:', typeof p5c);
+	
 	let cur_tiling = null;
 	let animationEnabled = true;
 
@@ -47,15 +54,6 @@ let sktch = function( p5c )
 		}
 		infoHTML += edgeShapes.join(', ') + '<br/>';
 		
-		// Display curve aggressiveness information
-		if (tilingData.edgeAggressiveness && tilingData.edgeAggressiveness.length > 0) {
-			infoHTML += '<strong>Curve Aggressiveness:</strong> ';
-			const aggLevels = tilingData.edgeAggressiveness.map(agg => 
-				`Edge ${agg.edgeIndex}: ${agg.level}`
-			);
-			infoHTML += aggLevels.join(', ') + '<br/>';
-		}
-		
 		infoHTML += `<strong>Colors:</strong> RGB(${tilingData.cols[0].join(',')})`;
 		for (let i = 1; i < tilingData.cols.length; i++) {
 			infoHTML += `, RGB(${tilingData.cols[i].join(',')})`;
@@ -68,220 +66,20 @@ let sktch = function( p5c )
 
 		infoDiv.innerHTML = infoHTML;
 	}
-	// Smart canvas utilization - adapts scale and position for optimal coverage
-	function calculateOptimalTransform(tiling, canvasWidth, canvasHeight) {
-		// Get tiling's natural size vectors
-		const t1 = tiling.getT1();
-		const t2 = tiling.getT2(); 
-		
-		// Calculate the characteristic size of this tiling type
-		const t1Len = Math.sqrt(t1.x * t1.x + t1.y * t1.y);
-		const t2Len = Math.sqrt(t2.x * t2.x + t2.y * t2.y);
-		
-		// Adaptive scaling based on canvas size and tiling characteristics
-		const canvasSize = Math.min(canvasWidth, canvasHeight);
-		
-		// More robust tile size calculation with fallback
-		let avgTileSize = (t1Len + t2Len) / 2;
-		
-		// Handle edge cases where tiling vectors are very small or very large
-		if (avgTileSize < 0.1) avgTileSize = 0.5; // Fallback for tiny tilings
-		if (avgTileSize > 10.0) avgTileSize = 2.0; // Fallback for huge tilings
-		
-		const targetTilesAcross = 8 + Math.random() * 4; // 8-12 tiles across (tighter range)
-		let optimalScale = canvasSize / (targetTilesAcross * avgTileSize);
-		
-		// More conservative scale variation (±20% instead of ±30%)
-		const scaleVariation = 0.8 + Math.random() * 0.4; // 0.8 to 1.2 multiplier
-		const finalScale = optimalScale * scaleVariation;
-		
-		// Smart positioning - ensure good coverage with some randomness
-		const marginFactor = 0.3; // 30% margin from edges
-		const effectiveWidth = canvasWidth * (1 - 2 * marginFactor);
-		const effectiveHeight = canvasHeight * (1 - 2 * marginFactor);
-		
-		const tx = canvasWidth * marginFactor + Math.random() * effectiveWidth;
-		const ty = canvasHeight * marginFactor + Math.random() * effectiveHeight;
-		
-		// Rotation - keep it interesting but not too chaotic
-		const theta = Math.random() * Math.PI * 2;
-		
-		return {
-			tx: tx / canvasWidth,  // Normalize to 0-1 range  
-			ty: ty / canvasHeight, // Normalize to 0-1 range
-			theta: theta,
-			sc: Math.max(3.0, Math.min(12.0, finalScale)) // Clamp to reasonable bounds
-		};
-	}
-	// Smart canvas utilization - adapts scale and position for optimal coverage
-	function calculateOptimalTransform(tiling, canvasWidth, canvasHeight) {
-		// Get tiling's natural size vectors
-		const t1 = tiling.getT1();
-		const t2 = tiling.getT2(); 
-		
-		// More robust tile size calculation with fallback
-		const t1Len = Math.sqrt(t1.x * t1.x + t1.y * t1.y);
-		const t2Len = Math.sqrt(t2.x * t2.x + t2.y * t2.y);
-		let avgTileSize = (t1Len + t2Len) / 2;
-		
-		// Handle edge cases where tiling vectors are very small or very large
-		if (avgTileSize < 0.1) avgTileSize = 0.5; // Fallback for tiny tilings
-		if (avgTileSize > 10.0) avgTileSize = 2.0; // Fallback for huge tilings
-		
-		// Adaptive scaling based on canvas size and tiling characteristics
-		const canvasSize = Math.min(canvasWidth, canvasHeight);
-		const targetTilesAcross = 8 + Math.random() * 4; // 8-12 tiles across (tighter range)
-		let optimalScale = canvasSize / (targetTilesAcross * avgTileSize);
-		
-		// More conservative scale variation (±20% instead of ±30%)
-		const scaleVariation = 0.8 + Math.random() * 0.4; // 0.8 to 1.2 multiplier
-		const finalScale = optimalScale * scaleVariation;
-		
-		// Smart positioning - ensure good coverage with some randomness
-		const marginFactor = 0.3; // 30% margin from edges
-		const effectiveWidth = canvasWidth * (1 - 2 * marginFactor);
-		const effectiveHeight = canvasHeight * (1 - 2 * marginFactor);
-		
-		const tx = canvasWidth * marginFactor + Math.random() * effectiveWidth;
-		const ty = canvasHeight * marginFactor + Math.random() * effectiveHeight;
-		
-		// Rotation - keep it interesting but not too chaotic
-		const theta = Math.random() * Math.PI * 2;
-		
-		return {
-			tx: tx / canvasWidth,  // Normalize to 0-1 range  
-			ty: ty / canvasHeight, // Normalize to 0-1 range
-			theta: theta,
-			sc: Math.max(3.0, Math.min(12.0, finalScale)) // Clamp to reasonable bounds
-		};
-	}
-
-
-	// Enhanced dynamic curve generation with aggressiveness tracking
-	function generateSafeCurve(shapeType, maxAttempts = 3) {
-		// More aggressive curve levels with expanded ranges
-		const aggressivenessLevels = [
-			{ name: 'Conservative', yRange: 0.15, xRangeJ: 0.3 },  // Still conservative but slightly more
-			{ name: 'Moderate', yRange: 0.3, xRangeJ: 0.45 },     // More moderate 
-			{ name: 'Aggressive', yRange: 0.45, xRangeJ: 0.6 },   // Very aggressive
-			{ name: 'Extreme', yRange: 0.6, xRangeJ: 0.7 }        // NEW: Even more aggressive!
-		];
-		
-		// Start from the most aggressive level and work down
-		for (let attempt = 0; attempt < maxAttempts; attempt++) {
-			const levelIndex = Math.max(0, aggressivenessLevels.length - 1 - attempt);
-			const level = aggressivenessLevels[levelIndex];
-			let controlPoints = [];
-			
-			if (shapeType === EdgeShape.J) {
-				controlPoints = [
-					{ x: Math.random() * level.xRangeJ + 0.1, y: (Math.random() - 0.5) * level.yRange },
-					{ x: Math.random() * level.xRangeJ + (1 - level.xRangeJ - 0.1), y: (Math.random() - 0.5) * level.yRange }
-				];
-			} else { // S or U curves
-				controlPoints = [
-					{ x: Math.random() * level.xRangeJ + 0.1, y: (Math.random() - 0.5) * level.yRange }
-				];
-				
-				if (shapeType === EdgeShape.S) {
-					controlPoints.push({ x: 1.0 - controlPoints[0].x, y: -controlPoints[0].y });
-				} else if (shapeType === EdgeShape.U) {
-					controlPoints.push({ x: 1.0 - controlPoints[0].x, y: controlPoints[0].y });
-				}
-			}
-			
-			// More lenient safety check to allow more aggressive curves
-			if (isControlPointSafe(controlPoints, shapeType, level.name)) {
-				return { controlPoints, aggressivenessLevel: level.name };
-			}
-		}
-		
-		// Fallback to conservative if all attempts failed
-		const safeLevel = aggressivenessLevels[0];
-		let controlPoints;
-		if (shapeType === EdgeShape.J) {
-			controlPoints = [
-				{ x: Math.random() * safeLevel.xRangeJ + 0.1, y: (Math.random() - 0.5) * safeLevel.yRange },
-				{ x: Math.random() * safeLevel.xRangeJ + (1 - safeLevel.xRangeJ - 0.1), y: (Math.random() - 0.5) * safeLevel.yRange }
-			];
-		} else {
-			const cp1 = { x: Math.random() * safeLevel.xRangeJ + 0.1, y: (Math.random() - 0.5) * safeLevel.yRange };
-			if (shapeType === EdgeShape.S) {
-				controlPoints = [cp1, { x: 1.0 - cp1.x, y: -cp1.y }];
-			} else {
-				controlPoints = [cp1, { x: 1.0 - cp1.x, y: cp1.y }];
-			}
-		}
-		return { controlPoints, aggressivenessLevel: safeLevel.name };
-	}
-	
-	// More intelligent safety check that considers tiling complexity
-	function isControlPointSafe(controlPoints, shapeType, levelName) {
-		// Adjust safety margin based on aggressiveness level and shape complexity
-		const safetyMargins = {
-			'Conservative': 0.2,
-			'Moderate': 0.32,
-			'Aggressive': 0.42,
-			'Extreme': 0.5  // More conservative for extreme level
-		};
-		const safetyMargin = safetyMargins[levelName] || 0.2;
-		
-		// Check Y-bounds for all control points with level-appropriate margin
-		for (let cp of controlPoints) {
-			if (Math.abs(cp.y) > safetyMargin) {
-				return false;
-			}
-		}
-		
-		// For J curves, check X distribution (slightly more conservative)
-		if (shapeType === EdgeShape.J && controlPoints.length >= 2) {
-			const xSpacing = Math.abs(controlPoints[1].x - controlPoints[0].x);
-			// Be more strict for extreme level
-			const minSpacing = levelName === 'Extreme' ? 0.25 : 0.18;
-			if (xSpacing < minSpacing) {
-				return false;
-			}
-		}
-		
-		// More careful bezier curve safety estimation
-		return estimateBezierSafety(controlPoints, safetyMargin * 0.9); // 10% more conservative
-	}
-	}
-	
-	// Enhanced bezier curve safety estimation with adjustable bounds
-	function estimateBezierSafety(controlPoints, safetyBound = 0.4) {
-		// Sample a few points along the bezier curve to check bounds
-		const sampleCount = 5;
-		
-		for (let i = 0; i <= sampleCount; i++) {
-			const t = i / sampleCount;
-			let y;
-			
-			if (controlPoints.length >= 2) {
-				// Cubic bezier approximation: P0(0,0), P1(cp[0]), P2(cp[1]), P3(1,0)
-				const y0 = 0, y1 = controlPoints[0].y, y2 = controlPoints[1].y || 0, y3 = 0;
-				y = (1-t)*(1-t)*(1-t)*y0 + 3*(1-t)*(1-t)*t*y1 + 3*(1-t)*t*t*y2 + t*t*t*y3;
-			} else {
-				// Quadratic bezier approximation
-				const y0 = 0, y1 = controlPoints[0].y, y2 = 0;
-				y = (1-t)*(1-t)*y0 + 2*(1-t)*t*y1 + t*t*y2;
-			}
-			
-			if (Math.abs(y) > safetyBound) {
-				return false; // Curve extends too far outside tile
-			}
-		}
-		
-		return true; // Curve appears safe
-	}
-	
-
-
 
 	function createRandomTiling()
 	{
-		const tilingTypeIndex = Math.floor( 81 * p5c.random() );
+		const tilingTypeIndex = Math.floor( tilingTypes.length * p5c.random() );
 		const tp = tilingTypes[ tilingTypeIndex ];
+		
+		// Add logging to help debug issues
+		console.log('[Random Generator] Selected tiling type index:', tilingTypeIndex);
+		console.log('[Random Generator] Selected tiling type:', tp);
+		
+		if (!tp) {
+			console.error('[Random Generator] ERROR: Tiling type is undefined for index', tilingTypeIndex);
+			throw new Error(`Invalid tiling type at index ${tilingTypeIndex}`);
+		}
 
 		let tiling = new IsohedralTiling( tp );
 		let ps = tiling.getParameters();
@@ -291,24 +89,20 @@ let sktch = function( p5c )
 		tiling.setParameters( ps );
 
 		let edges = [];
-		let edgeAggressiveness = [];
 		for( let i = 0; i < tiling.numEdgeShapes(); ++i ) {
 			let ej = [];
 			const shp = tiling.getEdgeShape( i );
 			if( shp == EdgeShape.I ) {
-				// Pass - straight edges need no control points
-			} else {
-				// Use dynamic curve generation with overlap detection
-				const curveResult = generateSafeCurve(shp);
-				ej = curveResult.controlPoints;
-				
-				// Store aggressiveness info for display
-				if (!edgeAggressiveness) edgeAggressiveness = [];
-				edgeAggressiveness.push({
-					edgeIndex: i,
-					shapeType: shp,
-					level: curveResult.aggressivenessLevel
-				});
+				// Pass
+			} else if( shp == EdgeShape.J ) {
+				ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
+				ej.push( { x: Math.random()*0.6 + 0.4, y : Math.random() - 0.5 } );
+			} else if( shp == EdgeShape.S ) {
+				ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
+				ej.push( { x: 1.0 - ej[0].x, y: -ej[0].y } );
+			} else if( shp == EdgeShape.U ) {
+				ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
+				ej.push( { x: 1.0 - ej[0].x, y: ej[0].y } );
 			}
 
 			edges.push( ej );
@@ -333,13 +127,11 @@ let sktch = function( p5c )
 			// Store additional info for display
 			tilingTypeIndex: tilingTypeIndex,
 			parameters: ps.slice(), // Copy the parameters array
-			edgeAggressiveness: edgeAggressiveness, // Store curve aggressiveness info
 
-			// Smart canvas utilization with proper scaling
-			tx: Math.random() * 0.7 + 0.15,  // 0.15 to 0.85 range (normalized)
-			ty: Math.random() * 0.7 + 0.15,  // 0.15 to 0.85 range (normalized)
+			tx: Math.random() * 10.0,
+			ty: Math.random() * 10.0,
 			theta: Math.random() * p5c.TWO_PI,
-			sc: Math.random() * 8.0 + 4.0,   // 4.0 to 12.0 scale range
+			sc: Math.random() * 20.0 + 4.0,
 
 			dx: dv * Math.cos( dtheta ),
 			dy: dv * Math.sin( dtheta )
@@ -374,7 +166,7 @@ let sktch = function( p5c )
 		const c = Math.cos( T.theta );
 		const s = Math.sin( T.theta );
 
-		const O = { x: T.tx * p5c.width, y: T.ty * p5c.height };
+		const O = { x: T.tx, y: T.ty };
 		const V = { x: c, y: s };
 		const W = { x: -s, y: c };
 
@@ -443,7 +235,7 @@ let sktch = function( p5c )
 				animationEnabled = this.checked;
 			});
 		}
-	};
+	}
 
 	p5c.draw = function()
 	{
@@ -453,10 +245,10 @@ let sktch = function( p5c )
 		
 		// Only animate if animation is enabled
 		if (animationEnabled) {
-			cur_tiling.tx += cur_tiling.dx / p5c.width;
-			cur_tiling.ty += cur_tiling.dy / p5c.height;
+			cur_tiling.tx += cur_tiling.dx;
+			cur_tiling.ty += cur_tiling.dy;
 		}
-	};
+	}
 
 	p5c.mousePressed = function()
 	{
@@ -466,6 +258,16 @@ let sktch = function( p5c )
 			cur_tiling = createRandomTiling();
 			displayTilingInfo( cur_tiling );
 		}
-	};
+	}
+};
 
-let myp5 = new p5( sktch, 'sktch' );
+console.log('[Random Generator] Creating p5 instance...');
+console.log('[Random Generator] p5 constructor available:', typeof p5);
+console.log('[Random Generator] window.p5 available:', typeof window.p5);
+
+// Access p5 from window object since we're in a module
+const p5Constructor = window.p5 || p5;
+console.log('[Random Generator] Using p5 constructor:', typeof p5Constructor);
+
+let myp5 = new p5Constructor( sktch, 'sktch' );
+console.log('[Random Generator] p5 instance created:', myp5);
