@@ -8,12 +8,8 @@
 
 console.log('[Random Generator] Module loading...');
 
-import { EdgeShape } from '../lib/constants/EdgeShape.js';
-import { tilingTypes } from '../lib/constants/TilingTypes.js';
-import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.js';
-import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
-import { sub, dot, inv } from './shared/MathUtils.js';
-import { generateRandomColors } from './shared/ColorUtils.js';
+import { mul, matchSeg, EdgeShape, numTypes, tilingTypes, IsohedralTiling } 
+	from '../lib/tactile.js';
 	
 console.log('[Random Generator] Imports loaded successfully');
 
@@ -25,8 +21,15 @@ let sktch = function( p5c )
 	let cur_tiling = null;
 	let animationEnabled = true;
 
-	// Import shared math utilities (using p5c.sqrt for len function)
-	function len( V ) { return p5c.sqrt( V.x*V.x + V.y*V.y ); }
+	function sub( V, W ) { return { x: V.x-W.x, y: V.y-W.y }; };
+	function dot( V, W ) { return V.x*W.x + V.y*W.y; };
+	function len( V ) { return p5c.sqrt( dot( V, V ) ); }
+
+	function inv( T ) {
+		const det = T[0]*T[4] - T[1]*T[3];
+		return [T[4]/det, -T[1]/det, (T[1]*T[5]-T[2]*T[4])/det,
+			-T[3]/det, T[0]/det, (T[2]*T[3]-T[0]*T[5])/det];
+	};
 
 	function displayTilingInfo(tilingData) 
 	{
@@ -78,7 +81,7 @@ let sktch = function( p5c )
 			throw new Error(`Invalid tiling type at index ${tilingTypeIndex}`);
 		}
 
-		let tiling = new OptimizedIsohedralTiling( tp );
+		let tiling = new IsohedralTiling( tp );
 		let ps = tiling.getParameters();
 		for( let i = 0; i < ps.length; ++i ) {
 			ps[i] += p5c.random() * 0.3 - 0.15;
@@ -105,7 +108,13 @@ let sktch = function( p5c )
 			edges.push( ej );
 		}
 
-		let cols = generateRandomColors(3);
+		let cols = [];
+		for( let i = 0; i < 3; ++i ) {
+			cols.push( [
+				Math.floor( Math.random() * 255.0 ), 
+				Math.floor( Math.random() * 255.0 ), 
+				Math.floor( Math.random() * 255.0 ) ] );
+		}
 
 		const dtheta = Math.random() * p5c.TWO_PI;
 		const dv = Math.random() * 0.02;

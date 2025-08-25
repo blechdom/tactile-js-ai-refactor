@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Tactile.js</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script type="module">
+        import { mul, EdgeShape, tilingTypes, IsohedralTiling } from './lib/tactile.js';
+        
+        const output = document.getElementById('output');
+        
+        try {
+            output.innerHTML += '<p>✅ Import successful</p>';
+            output.innerHTML += '<p>tilingTypes length: ' + tilingTypes.length + '</p>';
+            output.innerHTML += '<p>First few types: ' + tilingTypes.slice(0, 5).join(', ') + '</p>';
+            
+            // Test creating a tiling
+            const tp = tilingTypes[0];
+            output.innerHTML += '<p>Testing with type: ' + tp + '</p>';
+            
+            const tiling = new IsohedralTiling(tp);
+            output.innerHTML += '<p>✅ IsohedralTiling created successfully!</p>';
+            
+        } catch (error) {
+            output.innerHTML += '<p>❌ Error: ' + error.message + '</p>';
+            output.innerHTML += '<p>Stack: ' + error.stack + '</p>';
+            console.error('Full error:', error);
+        }
+    </script>
+</body>
+</html>

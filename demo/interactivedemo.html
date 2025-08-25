@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Tactile.js Interactive Demo</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
@@ -8,10 +9,77 @@
 <script src="p5.min.js"></script>
 <script src="quicksettings.min.js"></script>
 <script type="module" src="interactivedemo.js"></script>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.keyboard-shortcuts {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 13px;
+    line-height: 1.4;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.keyboard-shortcuts h4 {
+    margin: 0 0 10px 0;
+    color: #333;
+    font-size: 14px;
+}
+
+.shortcut {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.key {
+    background: #f1f3f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 11px;
+    color: #555;
+}
+
+.action {
+    color: #666;
+    font-size: 12px;
+}
+</style>
 </head>
 <body>
 
 <div id="sktch">
+</div>
+
+<div class="keyboard-shortcuts">
+    <h4>Keyboard Shortcuts</h4>
+    <div class="shortcut">
+        <span class="key">&larr; &rarr;</span>
+        <span class="action">Navigate tilings</span>
+    </div>
+    <div class="shortcut">
+        <span class="key">Space</span>
+        <span class="action">Toggle controls</span>
+    </div>
+    <div class="shortcut">
+        <span class="key">&lt; ,</span>
+        <span class="action">Zoom out</span>
+    </div>
+    <div class="shortcut">
+        <span class="key">&gt; .</span>
+        <span class="action">Zoom in</span>
+    </div>
 </div>
 
 </body>

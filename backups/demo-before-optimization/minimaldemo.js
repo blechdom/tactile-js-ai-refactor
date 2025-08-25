@@ -52,9 +52,11 @@ function drawRandomTiling()
 
 			if( si.shape != EdgeShape.I ) {
 				const ej = edges[ si.id ];
-							if (!ej) {
-				continue;
-			}
+				console.log(`Drawing edge with si.id=${si.id}, si.shape=${si.shape}, ej=`, ej);
+				if (!ej) {
+					console.error(`ERROR: No edge data for si.id=${si.id}. edges.length=${edges.length}`);
+					continue;
+				}
 				seg.push( mul( S, ej[0] ) );
 				seg.push( mul( S, ej[1] ) );
 			}
@@ -92,7 +94,14 @@ function makeRandomTiling()
 	const tilingTypeIndex = Math.floor( tilingTypes.length * Math.random() );
 	const tp = tilingTypes[ tilingTypeIndex ];
 	
+	// Add logging to help debug issues
+	console.log('Selected tiling type index:', tilingTypeIndex);
+	console.log('Tiling types array length:', tilingTypes.length);
+	console.log('Selected tiling type:', tp);
+	
 	if (!tp) {
+		console.error('ERROR: Tiling type is undefined for index', tilingTypeIndex);
+		console.log('Available indices:', tilingTypes.map((val, idx) => ({ idx, val })));
 		throw new Error(`Invalid tiling type at index ${tilingTypeIndex}`);
 	}
 	
@@ -111,11 +120,12 @@ function makeRandomTiling()
 	// Bezier control points that have all necessary symmetries.
 
 	let edges = [];
+	console.log('Creating edges for', tiling.numEdgeShapes(), 'edge shapes');
 	
 	for( let i = 0; i < tiling.numEdgeShapes(); ++i ) {
 		let ej = [];
 		const shp = tiling.getEdgeShape( i );
-
+		console.log(`Edge ${i}: shape type ${shp}`);
 		
 		if( shp == EdgeShape.I ) {
 			// Pass - straight edge needs no control points
@@ -131,10 +141,10 @@ function makeRandomTiling()
 		}
 
 		edges.push( ej );
-
+		console.log(`Edge ${i}: created with ${ej.length} control points`);
 	}
 	
-
+	console.log('Total edges created:', edges.length);
 
 	return { tiling: tiling, edges: edges }
 }

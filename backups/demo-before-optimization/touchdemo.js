@@ -10,13 +10,8 @@
 // and touch interfaces.  It's a bit messier -- hopefully I'll clean
 // up the code in the future.
 
-import { EdgeShape } from '../lib/constants/EdgeShape.js';
-import { tilingTypes } from '../lib/constants/TilingTypes.js';
-import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.js';
-import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
-import { sub, dot, len, ptdist, normalize, inv } from './shared/MathUtils.js';
-import { generateRandomColors } from './shared/ColorUtils.js';
-import { makeBox, hitBox, distToSeg } from './shared/GeometryUtils.js';
+import { mul, matchSeg, EdgeShape, numTypes, tilingTypes, IsohedralTiling } 
+	from '../lib/tactile.js';
 
 let sktch = function( p5c )
 {
@@ -29,8 +24,6 @@ let sktch = function( p5c )
 	let phys_unit; // Ideally, about a centimeter
 	let edit_button_box = null;
 	let save_button_box = null;
-	let color_button_box = null;
-	let outline_button_box = null;
 	let prev_box = null;
 	let next_box = null;
 	let navigator_box = null;
@@ -67,7 +60,6 @@ let sktch = function( p5c )
 
 	let editor_pane = null;
 	let show_controls = false;
-	let colorMode = true; // true = colors, false = outlines only
 
 	let msgs = [];
 	let DEBUG = true;
@@ -78,7 +70,7 @@ let sktch = function( p5c )
 		}
 	}
 
-	let COLS = [
+	const COLS = [
 		[ 25, 52, 65 ],
 		[ 62, 96, 111 ],
 		[ 145, 170, 157 ],
@@ -86,19 +78,29 @@ let sktch = function( p5c )
 		[ 252, 255, 245 ],
 		[ 219, 188, 209 ] ];
 
-	// Using shared generateRandomColors utility
-
-	function randomizeColors() {
-		COLS = generateRandomColors(6);
-		p5c.loop();
+	function sub( V, W ) { return { x: V.x-W.x, y: V.y-W.y }; }
+	function dot( V, W ) { return V.x*W.x + V.y*W.y; }
+	function len( V ) { return Math.sqrt( dot( V, V ) ); }
+	function ptdist( V, W ) { return len( sub( V, W ) ); }
+	function inv( T ) {
+		const det = T[0]*T[4] - T[1]*T[3];
+		return [T[4]/det, -T[1]/det, (T[1]*T[5]-T[2]*T[4])/det,
+			-T[3]/det, T[0]/det, (T[2]*T[3]-T[0]*T[5])/det];
+	}
+	function normalize( V ) {
+		const l = len( V );
+		return { x: V.x / l, y: V.y / l };
 	}
 
-	function toggleColorMode() {
-		colorMode = !colorMode;
-		p5c.loop();
+	function makeBox( x, y, w, h )
+	{
+		return { x: x, y: y, w: w, h: h };
 	}
 
-	// Using shared utilities from MathUtils.js and GeometryUtils.js
+	function hitBox( x, y, B )
+	{
+		return (x >= B.x) && (x <= (B.x+B.w)) && (y >= B.y) && (y <= (B.y+B.h));
+	}
 
 	let fake_serial = 123456;
 	let all_touch_ids = [];
@@ -219,9 +221,6 @@ let sktch = function( p5c )
 		tiling.reset( tp );
 		params = tiling.getParameters();
 
-		// Generate new colors for each tiling type
-		COLS = generateRandomColors(6);
-
 		edges = [];
 		for( let idx = 0; idx < tiling.numEdgeShapes(); ++idx ) {
 			let ej = [{ x: 0, y: 0 }, { x: 1, y: 0 }];
@@ -234,7 +233,7 @@ let sktch = function( p5c )
 
 	function nextTilingType()
 	{
-		if( the_type < (tilingTypes.length-1) ) {
+		if( the_type < (numTypes-1) ) {
 			the_type++;
 			setTilingType();
 		}
@@ -276,23 +275,16 @@ let sktch = function( p5c )
 
 	function drawTiling()
 	{
+		p5c.stroke( COLS[0][0], COLS[0][1], COLS[0][2] );
+		p5c.strokeWeight( 1.0 );
+
 		const bx = getTilingRect();
 		for( let i of tiling.fillRegionQuad( bx[0], bx[1], bx[2], bx[3] ) ) {
 			const TT = i.T;
 			const T = mul( tiling_T, TT );
 
-			if (colorMode) {
-				// Color mode - use color fills
-				const col = COLS[ tiling.getColour( i.t1, i.t2, i.aspect ) + 1 ];
-				p5c.fill( col[0], col[1], col[2] );
-				p5c.stroke( COLS[0][0], COLS[0][1], COLS[0][2] );
-				p5c.strokeWeight( 1.0 );
-			} else {
-				// Outline mode - black and white only
-				p5c.noFill();
-				p5c.stroke( 0 );
-				p5c.strokeWeight( 1.5 );
-			}
+			const col = COLS[ tiling.getColour( i.t1, i.t2, i.aspect ) + 1 ];
+			p5c.fill( col[0], col[1], col[2] );
 
 			p5c.beginShape();
 			for( let v of tile_shape ) {
@@ -326,7 +318,18 @@ let sktch = function( p5c )
 			[1, 0, -0.5*(xmin+xmax), 0, 1, -0.5*(ymin+ymax)] );
 	}
 
-	// Using shared distToSeg from GeometryUtils.js
+	function distToSeg( P, A, B )
+	{
+		const qmp = sub( B, A );
+		const t = dot( sub( P, A ), qmp ) / dot( qmp, qmp );
+		if( (t >= 0.0) && (t <= 1.0) ) {
+			return len( sub( P, { x: A.x + t*qmp.x, y : A.y + t*qmp.y } ) );
+		} else if( t < 0.0 ) {
+			return len( sub( P, A ) );
+		} else {
+			return len( sub( P, B ) );
+		}
+	}
 
 	function drawEditor()
 	{
@@ -511,19 +514,6 @@ let sktch = function( p5c )
 
 			if( hitBox( p5c.mouseX, p5c.mouseY, save_button_box ) ) {
 				saveSVG();
-				p5c.loop();
-				return false;
-			}
-
-			if( hitBox( p5c.mouseX, p5c.mouseY, outline_button_box ) ) {
-				toggleColorMode();
-				p5c.loop();
-				return false;
-			}
-
-			// Only allow color button clicks when colors are enabled
-			if( colorMode && hitBox( p5c.mouseX, p5c.mouseY, color_button_box ) ) {
-				randomizeColors();
 				p5c.loop();
 				return false;
 			}
@@ -751,12 +741,6 @@ let sktch = function( p5c )
 			0.25 * phys_unit, 0.25 * phys_unit, phys_unit, phys_unit );
 		save_button_box = makeBox(
 			1.5 * phys_unit, 0.25 * phys_unit, phys_unit, phys_unit );
-		// Add outline toggle button next to save button  
-		outline_button_box = makeBox(
-			2.75 * phys_unit, 0.25 * phys_unit, phys_unit, phys_unit );
-		// Add color button next to outline button (only visible when colors enabled)
-		color_button_box = makeBox(
-			4.0 * phys_unit, 0.25 * phys_unit, phys_unit, phys_unit );
 		navigator_box = makeBox(
 			w - 5.25 * phys_unit, 0.25 * phys_unit, 5 * phys_unit, phys_unit );
 		prev_box = makeBox(
@@ -809,7 +793,7 @@ let sktch = function( p5c )
 		}
 
 		const tp = tilingTypes[ the_type ];
-		tiling = new OptimizedIsohedralTiling( tp );
+		tiling = new IsohedralTiling( tp );
 
 		setTilingType();
 	}
@@ -839,12 +823,6 @@ let sktch = function( p5c )
 
 		drawIcon( drawEditIcon, edit_button_box );
 		drawIcon( drawSaveIcon, save_button_box );
-		drawIcon( drawOutlineIcon, outline_button_box );
-		
-		// Only show color wheel button when colors are enabled
-		if (colorMode) {
-			drawIcon( drawColorIcon, color_button_box );
-		}
 
 		p5c.fill( 252, 255, 254, 220 );
 		p5c.stroke( 0 );
@@ -1021,88 +999,6 @@ let sktch = function( p5c )
 		p5c.vertex( 115.988, 200.0 );
 		p5c.vertex( 114.25, 184.789 );
 		p5c.endShape( p5c.CLOSE );
-	}
-
-	function drawColorIcon()
-	{
-		drawIconBackground();
-
-		// Draw a color wheel with colored segments
-		const centerX = 100;
-		const centerY = 100;
-		const radius = 50;
-		const numSegments = 8;
-		
-		p5c.stroke( 0 );
-		p5c.strokeWeight( 1 );
-		
-		// Draw colored segments of the wheel
-		for (let i = 0; i < numSegments; i++) {
-			const startAngle = (i * p5c.TWO_PI) / numSegments;
-			const endAngle = ((i + 1) * p5c.TWO_PI) / numSegments;
-			
-			// Set color based on position around wheel
-			const hue = (i * 360) / numSegments;
-			p5c.colorMode(p5c.HSB, 360, 100, 100);
-			p5c.fill(hue, 80, 90);
-			
-			// Draw arc segment
-			p5c.arc(centerX, centerY, radius * 2, radius * 2, startAngle, endAngle, p5c.PIE);
-		}
-		
-		// Switch back to RGB mode
-		p5c.colorMode(p5c.RGB, 255);
-		
-		// Draw white center circle
-		p5c.fill(255);
-		p5c.stroke(0);
-		p5c.strokeWeight(2);
-		p5c.ellipse(centerX, centerY, 30, 30);
-		
-		// Draw small refresh arrows around the center to indicate randomization
-		p5c.stroke(0);
-		p5c.strokeWeight(2);
-		p5c.noFill();
-		
-		// Two small curved arrows
-		p5c.arc(centerX - 8, centerY, 12, 12, 0, p5c.PI);
-		p5c.arc(centerX + 8, centerY, 12, 12, p5c.PI, p5c.TWO_PI);
-		
-		// Arrow heads
-		p5c.line(centerX - 14, centerY, centerX - 16, centerY - 2);
-		p5c.line(centerX - 14, centerY, centerX - 16, centerY + 2);
-		p5c.line(centerX + 14, centerY, centerX + 16, centerY - 2);
-		p5c.line(centerX + 14, centerY, centerX + 16, centerY + 2);
-
-		drawIconOutline();
-	}
-
-	function drawOutlineIcon()
-	{
-		drawIconBackground();
-
-		if (colorMode) {
-			// Show "Color Mode" - filled colorful circles (similar to color icon)
-			p5c.fill( 255, 100, 100 );
-			p5c.noStroke();
-			p5c.ellipse( 80, 80, 40, 40 );
-			
-			p5c.fill( 100, 255, 100 );
-			p5c.ellipse( 120, 80, 40, 40 );
-			
-			p5c.fill( 100, 100, 255 );
-			p5c.ellipse( 100, 120, 40, 40 );
-		} else {
-			// Show "Outline Mode" - three empty circles (just outlines)
-			p5c.noFill();
-			p5c.stroke( 0 );
-			p5c.strokeWeight( 3 );
-			p5c.ellipse( 80, 80, 40, 40 );
-			p5c.ellipse( 120, 80, 40, 40 );
-			p5c.ellipse( 100, 120, 40, 40 );
-		}
-
-		drawIconOutline();
 	}
 };
 

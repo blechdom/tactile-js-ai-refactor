@@ -1,0 +1,185 @@
+127.0.0.1 - - [25/Aug/2025 15:03:30] "HEAD /demo/random-tiling-generator.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:03:30] "HEAD /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:04:36] "HEAD /demo/interactivedemo.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:04:36] "HEAD /demo/touchdemo.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:05:38] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:39] "GET /favicon.ico HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /demo/random-tiling-generator.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /demo/random-tiling-generator.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/constants/TilingTypes.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/constants/EdgeShape.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/core/IsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /demo/shared/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/data/LazyTilingLoader.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/data/TilingDataLoader.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:41] "GET /lib/core/TilingType.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:05:43] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:05:43] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:06:00] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:06:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:06:00] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:06:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:06:02] "GET /demo/interactivedemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:06:02] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:06:02] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:06:02] "GET /demo/quicksettings.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:06:02] "GET /demo/interactivedemo.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:06:02] "GET /demo/tileinfo.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:06:58] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:06:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:06:58] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:06:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:01] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:07:01] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:01] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:07:01] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:03] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:07:03] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:03] "GET /demo/random-tiling-generator.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:07:05] "GET /demo/random-tiling-generator.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:07:05] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:07:05] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:05] "GET /favicon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /demo/random-tiling-generator.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /demo/random-tiling-generator.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /demo/shared/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/core/IsohedralTiling.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/data/LazyTilingLoader.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/data/TilingDataLoader.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /lib/core/TilingType.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:07] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:07:57] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:07:57] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:58] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:07:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:59] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:07:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:07:59] "GET /demo/tileinfo.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:07:59] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:08:01] "GET /demo/interactivedemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:08:01] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:08:01] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:08:01] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:08:06] "GET /demo/interactivedemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:08:06] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:08:06] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:08:06] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:08:45] "GET /demo/interactivedemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:08:45] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:08:45] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:08:45] "GET /demo/tileinfo.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:08:45] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:09:50] "HEAD /demo/random-tiling-generator.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:09:50] "HEAD /demo/interactivedemo.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:09:50] "HEAD /demo/touchdemo.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:09:50] "HEAD /demo/minimaldemo.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:09:52] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:09:52] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:09:52] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:09:52] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:09:55] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:09:55] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:09:55] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:09:55] "GET /demo/minimaldemo.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:09:57] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:09:57] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:09:57] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:09:58] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:09:58] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:09:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:09:58] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:09:58] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:09:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:09:59] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:09:59] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:09:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:09:59] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:09:59] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:09:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:00] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:00] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:00] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:00] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:01] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:01] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:01] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:01] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:01] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:01] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:02] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:02] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:02] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:02] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:02] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:02] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:03] "GET /demo/minimaldemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:03] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:03] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:04] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:04] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:04] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:04] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:05] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:05] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:10:05] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:10:05] "GET /demo/touchdemo.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:10:05] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:10:05] "GET /demo/shared/GeometryUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:12:57] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:12:57] "GET /demo/touchdemo.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:12:57] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:12:57] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:12:57] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:12:59] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:12:59] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:12:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:14:09] "GET /demo/ HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:14:16] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:14:16] "GET /favicon.svg HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:14:38] "GET /tests/browser/run-browser-test.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:14:39] code 404, message File not found
+127.0.0.1 - - [25/Aug/2025 15:14:39] "GET /tests/browser/lib/tactile.js HTTP/1.1" 404 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /demo/touchdemo.html HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /demo/touchdemo.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /demo/shared/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /demo/shared/GeometryUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/core/IsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/data/LazyTilingLoader.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/data/TilingDataLoader.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:15:00] "GET /lib/core/TilingType.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:16:06] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:16:06] "GET /demo/touchdemo.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:16:06] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:17:24] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:17:24] "GET /demo/touchdemo.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:17:24] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:17:25] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:17:26] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:17:29] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:18:02] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:18:02] "GET /demo/touchdemo.js HTTP/1.1" 200 -
+127.0.0.1 - - [25/Aug/2025 15:18:02] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:18:03] "GET /demo/touchdemo.html HTTP/1.1" 304 -
+127.0.0.1 - - [25/Aug/2025 15:18:03] "GET /demo/touchdemo.js HTTP/1.1" 304 -

@@ -9,10 +9,8 @@
 // A port of the Tactile C++ demo program to P5.js.
 
 import { makeBox, EditableTiling } from './tileinfo.js';
-import { EdgeShape } from '../lib/constants/EdgeShape.js';
-import { tilingTypes } from '../lib/constants/TilingTypes.js';
-import { IsohedralTiling, mul } from '../lib/core/IsohedralTiling.js';
-import { generateRandomColors } from './shared/ColorUtils.js';
+import { mul, EdgeShape, numTypes, tilingTypes, IsohedralTiling } 
+	from '../lib/tactile.js';
 
 let sktch = function( p5c )
 {
@@ -30,9 +28,8 @@ let sktch = function( p5c )
 	let tiling = null;
 
 	let dragging = null;
-	let colorMode = true; // true = colors, false = outlines only
 
-	let COLS = [
+	const COLS = [
 		[ 25, 52, 65 ],
 		[ 62, 96, 111 ],
 		[ 145, 170, 157 ],
@@ -40,25 +37,10 @@ let sktch = function( p5c )
 		[ 252, 255, 245 ],
 		[ 219, 188, 209 ] ];
 
-	// Using shared generateRandomColors utility
-
-	function randomizeColors() {
-		COLS = generateRandomColors(6);
-		p5c.loop();
-	}
-
-	function toggleColorMode() {
-		colorMode = !colorMode;
-		p5c.loop();
-	}
-
 	function setTilingType()
 	{
 		const tp = tilingTypes[ the_type ];
 		tiling.setType( tp );
-
-		// Generate new colors for each tiling type
-		COLS = generateRandomColors(6);
 
 		let title = "Tiling: IH";
 		if( tp < 10 ) {
@@ -87,7 +69,7 @@ let sktch = function( p5c )
 
 	function nextTilingType()
 	{
-		if( the_type < (tilingTypes.length-1) ) {
+		if( the_type < (numTypes-1) ) {
 			the_type++;
 			setTilingType();
 		}
@@ -111,24 +93,17 @@ let sktch = function( p5c )
 			[1, 0, p5c.width/2.0, 0, 1, p5c.height/2.0],
 			[sc, 0, 0, 0, -sc, 0] );
 
+		p5c.stroke( COLS[0][0], COLS[0][1], COLS[0][2] );
+		p5c.strokeWeight( 1.0 );
+
 		const proto = tiling.getPrototile();
 
 		for( let i of proto.fillRegionBounds(-w-2.0, -h-2.0, w+2.0, h+2.0) ) {
 			const TT = i.T;
 			const T = mul( M, TT );
 
-			if (colorMode) {
-				// Color mode - use color fills
-				const col = COLS[ proto.getColour( i.t1, i.t2, i.aspect ) + 1 ];
-				p5c.fill( col[0], col[1], col[2] );
-				p5c.stroke( COLS[0][0], COLS[0][1], COLS[0][2] );
-				p5c.strokeWeight( 1.0 );
-			} else {
-				// Outline mode - black and white only
-				p5c.noFill();
-				p5c.stroke( 0 );
-				p5c.strokeWeight( 1.5 );
-			}
+			const col = COLS[ proto.getColour( i.t1, i.t2, i.aspect ) + 1 ];
+			p5c.fill( col[0], col[1], col[2] );
 
 			p5c.beginShape();
 			for( let v of tiling.getTileShape() ) {
@@ -319,12 +294,6 @@ let sktch = function( p5c )
 			QS.addRange( "v" + idx, 0, 2, 1, 0.0001, null );
 			QS.hideControl( "v" + idx );
 		}
-		
-		// Add random colors button
-		QS.addButton( "Random Colors", randomizeColors );
-		
-		// Add color/outline toggle
-		QS.addBoolean( "Color Mode", colorMode, toggleColorMode );
 
 		editor_pane = p5c.createGraphics( editor_box.w, editor_box.h );
 

@@ -8,14 +8,45 @@
 
 'use strict';
 
-import { EdgeShape } from '../lib/constants/EdgeShape.js';
-import { tilingTypes } from '../lib/constants/TilingTypes.js';
-import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.js';
-import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
-import { sub, dot, len, ptdist, normalize, inv } from './shared/MathUtils.js';
+import { mul, matchSeg, EdgeShape, numTypes, tilingTypes, IsohedralTiling } 
+	from '../lib/tactile.js';
 
 // A collection of utilities and classes that are generally useful when
 // displaying and manipulating isohedral tilings interactively.
+
+function sub( V, W )
+{ 
+	return { x: V.x-W.x, y: V.y-W.y }; 
+}
+
+function dot( V, W )
+{ 
+	return V.x*W.x + V.y*W.y; 
+}
+
+function len( V )
+{ 
+	return Math.sqrt( dot( V, V ) ); 
+}
+
+function ptdist( V, W )
+{ 
+	return len( sub( V, W ) ); 
+}
+
+function normalize( V ) 
+{
+	const l = len( V );
+	return { x: V.x / l, y: V.y / l };
+}
+
+// 2D affine matrix inverse
+function inv( T )
+{
+	const det = T[0]*T[4] - T[1]*T[3];
+	return [T[4]/det, -T[1]/det, (T[1]*T[5]-T[2]*T[4])/det,
+		-T[3]/det, T[0]/det, (T[2]*T[3]-T[0]*T[5])/det];
+}
 
 // Shortest distance from point P to line segment AB.
 function distToSeg( P, A, B )
@@ -56,7 +87,7 @@ class EditableTiling
 	setType( tp )
 	{
 		this.the_type = tp;
-		this.tiling = new OptimizedIsohedralTiling( tp );
+		this.tiling = new IsohedralTiling( tp );
 		this.params = this.tiling.getParameters();
 
 		this.edges = [];
