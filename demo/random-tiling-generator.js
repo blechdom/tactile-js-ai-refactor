@@ -18,6 +18,8 @@ let sketch = function( p5c )
 {
 	let currentTiling = null;
 	let animationEnabled = true;
+	let curvatureIntensity = Math.random(); // 0.0 = no curves, 1.0 = maximum curves
+	let quickSettingsUI = null;
 
 	// Import shared math utilities (using p5c.sqrt for len function)
 	function len( V ) { return p5c.sqrt( V.x*V.x + V.y*V.y ); }
@@ -53,7 +55,13 @@ let sketch = function( p5c )
 		
 		infoHTML += `<strong>Transform:</strong> Position(${tilingData.tx.toFixed(2)}, ${tilingData.ty.toFixed(2)}), `;
 		infoHTML += `Rotation: ${(tilingData.theta * 180 / Math.PI).toFixed(1)}°, `;
-		infoHTML += `Scale: ${tilingData.sc.toFixed(2)}`;
+		infoHTML += `Scale: ${tilingData.sc.toFixed(2)}<br/>`;
+		
+		// Add curvature intensity display
+		const intensityLabels = ["None", "Minimal", "Moderate", "Strong", "Extreme"];
+		const intensityIndex = Math.floor(curvatureIntensity * (intensityLabels.length - 1));
+		const actualLabel = intensityLabels[intensityIndex] || "Extreme";
+		infoHTML += `<strong>Curvature:</strong> ${actualLabel} (${(curvatureIntensity * 100).toFixed(0)}%)`;
 
 		infoDiv.innerHTML = infoHTML;
 	}
@@ -86,13 +94,16 @@ let sketch = function( p5c )
 			if( shp == EdgeShape.I ) {
 				// Pass
 			} else if( shp == EdgeShape.J ) {
-				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
-				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE + 0.4, y : Math.random() - HALF } );
+				const intensity = curvatureIntensity;
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : (Math.random() - HALF) * intensity } );
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE + 0.4, y : (Math.random() - HALF) * intensity } );
 			} else if( shp == EdgeShape.S ) {
-				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
+				const intensity = curvatureIntensity;
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : (Math.random() - HALF) * intensity } );
 				ej.push( { x: 1.0 - ej[0].x, y: -ej[0].y } );
 			} else if( shp == EdgeShape.U ) {
-				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
+				const intensity = curvatureIntensity;
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : (Math.random() - HALF) * intensity } );
 				ej.push( { x: 1.0 - ej[0].x, y: ej[0].y } );
 			}
 
@@ -123,6 +134,41 @@ let sketch = function( p5c )
 		};
 		
 		return tilingData;
+	}
+
+	function regenerateCurves(tilingData) {
+		// Regenerate only the curves with current curvature intensity
+		let edges = [];
+		for( let i = 0; i < tilingData.tiling.numEdgeShapes(); ++i ) {
+			let ej = [];
+			const shp = tilingData.tiling.getEdgeShape( i );
+			if( shp == EdgeShape.I ) {
+				// Pass - straight edges
+			} else if( shp == EdgeShape.J ) {
+				const intensity = curvatureIntensity;
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : (Math.random() - HALF) * intensity } );
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE + 0.4, y : (Math.random() - HALF) * intensity } );
+			} else if( shp == EdgeShape.S ) {
+				const intensity = curvatureIntensity;
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : (Math.random() - HALF) * intensity } );
+				ej.push( { x: 1.0 - ej[0].x, y: -ej[0].y } );
+			} else if( shp == EdgeShape.U ) {
+				const intensity = curvatureIntensity;
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : (Math.random() - HALF) * intensity } );
+				ej.push( { x: 1.0 - ej[0].x, y: ej[0].y } );
+			}
+			edges.push( ej );
+		}
+		tilingData.edges = edges;
+	}
+
+	function onCurvatureChange(data) {
+		curvatureIntensity = data.value;
+		if (currentTiling) {
+			regenerateCurves(currentTiling);
+			displayTilingInfo(currentTiling); // Update the info display with new curvature
+			p5c.loop();
+		}
 	}
 
 	function samp( O, V, W, a, b )
@@ -220,6 +266,24 @@ let sketch = function( p5c )
 				animationEnabled = this.checked;
 			});
 		}
+
+		// Set up QuickSettings UI for curvature control
+		let res = document.getElementById( "sktch" ).getBoundingClientRect();
+		quickSettingsUI = QuickSettings.create(
+			res.left + window.scrollX + 10, res.top + window.scrollY + 10, 
+			"Curve Controls" );
+		
+		// Add curvature intensity slider (0.0 = straight, 1.0 = maximum curves)
+		quickSettingsUI.addRange("Curvature", 0.0, 1.0, curvatureIntensity, 0.01, onCurvatureChange);
+		quickSettingsUI.addButton("New Random Curves", function() {
+			regenerateCurves(currentTiling);
+			p5c.loop();
+		});
+		quickSettingsUI.addButton("New Random Tiling", function() {
+			curvatureIntensity = quickSettingsUI.getValue("Curvature"); // Keep current curvature setting
+			currentTiling = createRandomTiling();
+			displayTilingInfo( currentTiling );
+		});
 	}
 
 	p5c.draw = function()
