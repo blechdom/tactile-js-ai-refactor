@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tactile.js - Interactive Isohedral Tiling Demonstrations</title>
-    <meta http-equiv="refresh" content="3; url=./demo/interactivedemo.html">
+    <meta http-equiv="refresh" content="0; url=#demos">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -35,21 +35,52 @@
             margin-bottom: 2rem;
             line-height: 1.6;
         }
-        .redirect-link {
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .demo-card {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+        .demo-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        .demo-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .demo-description {
+            font-size: 0.95rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        .demo-link {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 8px 20px;
             background: rgba(255, 255, 255, 0.2);
             color: white;
             text-decoration: none;
-            border-radius: 25px;
-            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease;
             font-weight: bold;
+            font-size: 0.9rem;
         }
-        .redirect-link:hover {
+        .demo-link:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
         .loading {
             margin-top: 1rem;
@@ -62,17 +93,50 @@
     <div class="container">
         <h1>🎨 Tactile.js</h1>
         <p>Interactive demonstrations of isohedral tilings with beautiful mathematical patterns and dynamic visualizations.</p>
-        <p>You will be automatically redirected in a moment...</p>
-        <a href="./demo/interactivedemo.html" class="redirect-link">Interactive Demo</a>
-        <a href="./demo/touchdemo.html" class="redirect-link" style="margin-left: 1rem;">Touch Demo</a>
-        <p class="loading">⏳ Loading...</p>
+        
+        <div id="demos" class="demo-grid">
+            <div class="demo-card">
+                <div class="demo-title">🎛️ Interactive Demo</div>
+                <div class="demo-description">Full-featured demo with parameter sliders, edge shape controls, and keyboard navigation. Perfect for exploring tiling mathematics in detail.</div>
+                <a href="./demo/interactivedemo.html" class="demo-link">Launch Interactive Demo</a>
+            </div>
+            
+            <div class="demo-card">
+                <div class="demo-title">🎯 Random Tiling Generator</div>
+                <div class="demo-description">Click to generate random tilings with real-time Bezier curvature control. Features animation toggle and curve intensity slider.</div>
+                <a href="./demo/random-tiling-generator.html" class="demo-link">Launch Generator</a>
+            </div>
+            
+            <div class="demo-card">
+                <div class="demo-title">📱 Touch Demo</div>
+                <div class="demo-description">Touch-optimized interface with gesture controls, color mode toggle, and simplified UI perfect for mobile devices.</div>
+                <a href="./demo/touchdemo.html" class="demo-link">Launch Touch Demo</a>
+            </div>
+            
+            <div class="demo-card">
+                <div class="demo-title">🔬 Minimal Demo</div>
+                <div class="demo-description">Lightweight demonstration showing basic tiling functionality with clean, minimal interface for learning and experimentation.</div>
+                <a href="./demo/minimaldemo.html" class="demo-link">Launch Minimal Demo</a>
+            </div>
+        </div>
+        
+        <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">Choose any demo above to explore interactive isohedral tilings!</p>
     </div>
 
     <script>
-        // Backup JavaScript redirect in case meta refresh doesn't work
-        setTimeout(() => {
-            window.location.href = './demo/interactivedemo.html';
-        }, 3000);
+        // No automatic redirect - let users choose their demo
+        // Add some interactive hover effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.demo-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(-5px) scale(1)';
+                });
+            });
+        });
     </script>
 </body>
 </html>
