@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Debug Parameter Bug - Tactile.js</title>
+<script type="module">
+import { tilingTypes } from './lib/constants/TilingTypes.js';
+import { OptimizedIsohedralTiling } from './lib/core/OptimizedIsohedralTiling.js';
+import { TILING_TYPE_DEFINITIONS } from './lib/data/TilingData.js';
+
+// Test the problematic tiling types
+const PROBLEM_TYPES = [4, 5, 6]; // IH04, IH05, IH06
+
+function logTilingState(tiling, label, tilingType) {
+    const params = tiling.getParameters();
+    const internal = tiling._getFallbackTiling ? tiling._getFallbackTiling().parameters : tiling.parameters;
+    
+    console.group(`🔍 ${label} - Tiling Type ${tilingType}`);
+    console.log('📊 External parameters:', params);
+    console.log('📦 Internal parameters:', internal);
+    console.log('🔢 Parameter counts:', {
+        external: params.length,
+        internal: internal ? internal.length : 'undefined',
+        expected: TILING_TYPE_DEFINITIONS[tilingType].num_params
+    });
+    console.log('🏗️ Tiling data:', {
+        type: tiling.tiling_type || (tiling._getFallbackTiling() ? tiling._getFallbackTiling().tiling_type : 'unknown'),
+        numParams: TILING_TYPE_DEFINITIONS[tilingType].num_params,
+        defaultParams: TILING_TYPE_DEFINITIONS[tilingType].default_params
+    });
+    console.groupEnd();
+}
+
+function testParameterBug() {
+    console.log('🚨 PARAMETER BUG DIAGNOSTIC TOOL 🚨');
+    console.log('Testing IH04, IH05, IH06 parameter behavior\n');
+    
+    PROBLEM_TYPES.forEach(tilingType => {
+        console.log(`\n═══════════════════════════════════════`);
+        console.log(`🧪 TESTING TILING TYPE ${tilingType} (IH${tilingType.toString().padStart(2, '0')})`);
+        console.log(`═══════════════════════════════════════`);
+        
+        // Step 1: Create fresh tiling
+        const tiling = new OptimizedIsohedralTiling(tilingType);
+        logTilingState(tiling, 'STEP 1: Fresh Creation', tilingType);
+        
+        // Step 2: Get initial parameters
+        const initialParams = tiling.getParameters();
+        logTilingState(tiling, 'STEP 2: After getParameters()', tilingType);
+        
+        // Step 3: Simulate slider movement (modify first parameter)
+        const modifiedParams = [...initialParams];
+        modifiedParams[0] = 0.8; // Simulate slider change
+        
+        console.log('🎚️ Simulating slider movement...');
+        console.log('Before setParameters:', modifiedParams);
+        
+        // Step 4: Set the modified parameters (this is where the bug likely occurs)
+        try {
+            tiling.setParameters(modifiedParams);
+            logTilingState(tiling, 'STEP 4: After setParameters() - SUCCESS', tilingType);
+        } catch (error) {
+            console.error('❌ setParameters() FAILED:', error);
+            logTilingState(tiling, 'STEP 4: After setParameters() - FAILED', tilingType);
+        }
+        
+        // Step 5: Get parameters again (should be same count as initial)
+        const finalParams = tiling.getParameters();
+        logTilingState(tiling, 'STEP 5: After second getParameters()', tilingType);
+        
+        // Step 6: Compare counts
+        console.log('📈 PARAMETER COUNT COMPARISON:');
+        console.table({
+            'Initial Count': initialParams.length,
+            'Modified Count': modifiedParams.length,
+            'Final Count': finalParams.length,
+            'Expected Count': TILING_TYPE_DEFINITIONS[tilingType].num_params,
+            'Count Changed': initialParams.length !== finalParams.length ? '❌ YES' : '✅ NO'
+        });
+        
+        // Step 7: Test multiple parameter changes
+        console.log('🔄 Testing multiple parameter changes...');
+        for (let i = 0; i < Math.min(3, finalParams.length); i++) {
+            const testParams = [...finalParams];
+            testParams[i] = Math.random();
+            
+            try {
+                tiling.setParameters(testParams);
+                const afterParams = tiling.getParameters();
+                console.log(`Parameter ${i} change: ${finalParams.length} → ${afterParams.length} params`);
+                
+                if (finalParams.length !== afterParams.length) {
+                    console.error(`💥 PARAMETER COUNT CHANGED on parameter ${i}!`);
+                    logTilingState(tiling, `CORRUPTION at parameter ${i}`, tilingType);
+                    break;
+                }
+            } catch (error) {
+                console.error(`❌ Failed to set parameter ${i}:`, error);
+            }
+        }
+    });
+    
+    console.log('\n🏁 Diagnostic complete. Check console output above for parameter count mismatches.');
+}
+
+// Run the test
+window.addEventListener('load', testParameterBug);
+</script>
+</head>
+<body style="font-family: monospace; padding: 20px;">
+    <h1>🔬 Parameter Bug Diagnostic Tool</h1>
+    <p>This tool tests the parameter behavior of IH04, IH05, and IH06 tiling types.</p>
+    <p><strong>Open the browser console (F12) to see detailed diagnostic output.</strong></p>
+    
+    <div style="background: #f0f0f0; padding: 15px; margin: 20px 0; border-radius: 5px;">
+        <h3>🎯 What we're testing:</h3>
+        <ul>
+            <li>Parameter count consistency across operations</li>
+            <li>Internal vs external parameter states</li>
+            <li>setParameters() / getParameters() round-trip behavior</li>
+            <li>Multiple parameter change interactions</li>
+        </ul>
+    </div>
+    
+    <div style="background: #fff3cd; padding: 15px; margin: 20px 0; border-radius: 5px;">
+        <h3>🚨 Expected Issues:</h3>
+        <ul>
+            <li><strong>IH04:</strong> Should have 6 parameters, likely drops to 4</li>
+            <li><strong>IH05:</strong> Should have 5 parameters, likely drops to 4</li>
+            <li><strong>IH06:</strong> Should have 5 parameters, likely drops to 4</li>
+        </ul>
+    </div>
+</body>
+</html>

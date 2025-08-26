@@ -14,6 +14,7 @@ import { EdgeShape } from '../lib/constants/EdgeShape.js';
 import { tilingTypes } from '../lib/constants/TilingTypes.js';
 import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.js';
 import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
+import { TILING_TYPE_DEFINITIONS } from '../lib/data/TilingData.js';
 import { PHYSICAL_UNIT, RGB_MAX, UI_BACKGROUND, STROKE_WEIGHT_THIN, UI_FILL_LIGHT } from './shared/Constants.js';
 import { sub, dot, len, ptdist, normalize, inv } from './shared/MathUtils.js';
 import { generateRandomColors } from './shared/ColorUtils.js';
@@ -217,8 +218,16 @@ let sketch = function( p5c )
 	function setTilingType()
 	{
 		const tp = tilingTypes[ selectedTilingType ];
+		console.log(`🔄 Setting tiling type ${tp} (IH${tp.toString().padStart(2, '0')})`);
+		
 		tiling.reset( tp );
 		params = tiling.getParameters();
+		
+		console.log(`📊 Initial parameters for IH${tp.toString().padStart(2, '0')}:`, {
+			count: params.length,
+			values: params,
+			expected: tp <= 81 ? 'check data' : 'unknown'
+		});
 
 		// Generate new colors for each tiling type
 		COLS = generateRandomColors(6);
@@ -409,6 +418,11 @@ let sketch = function( p5c )
 		let yy = 25;
 		const xx = edit_box.w - 25 - slide_w;
 		pg.textSize( slide_h * 0.75 );
+
+		// Debug slider count
+		if (DEBUG && params.length !== (TILING_TYPE_DEFINITIONS[tiling.tiling_type || tilingTypes[selectedTilingType]]?.num_params || 'unknown')) {
+			debugLog(`🚨 Slider count mismatch! Drawing ${params.length} sliders, expected ${TILING_TYPE_DEFINITIONS[tiling.tiling_type || tilingTypes[selectedTilingType]]?.num_params}`);
+		}
 
 		for( let i = 0; i < params.length; ++i ) {
 			pg.fill( 200 );
@@ -695,15 +709,31 @@ let sketch = function( p5c )
 			// FIXME -- it would be better if this mode and Mode.MOVE_VERTEX
 			// used my_touches instead of mouseX and mouseY.  Oh well.
 
-			const params = tiling.getParameters();
+			const paramsBefore = tiling.getParameters();
+			console.log(`🎚️ BEFORE slider ${drag_tv}: ${paramsBefore.length} params`, paramsBefore);
+			
 			let yy = 25 + 30*drag_tv;
 			const xx = edit_box.w - 25 - 5*phys_unit;
 
 			const t = p5c.map(
 				p5c.mouseX-edit_box.x-drag_tv_offs, xx,
 				xx+5*phys_unit-20, 0, 2 );
-			params[drag_tv] = t;
-			tiling.setParameters( params );
+			paramsBefore[drag_tv] = t;
+			
+			console.log(`🎚️ SETTING slider ${drag_tv} to ${t}: ${paramsBefore.length} params`, paramsBefore);
+			tiling.setParameters( paramsBefore );
+			
+			const paramsAfter = tiling.getParameters();
+			console.log(`🎚️ AFTER slider ${drag_tv}: ${paramsAfter.length} params`, paramsAfter);
+			
+			if (paramsBefore.length !== paramsAfter.length) {
+				console.error(`💥 PARAMETER COUNT CHANGED! ${paramsBefore.length} → ${paramsAfter.length}`);
+				console.error('🔍 Tiling state:', {
+					tilingType: tiling.tiling_type || 'unknown',
+					internal: tiling._getFallbackTiling ? tiling._getFallbackTiling().parameters : 'no fallback'
+				});
+			}
+			
 			cacheTileShape();
 			p5c.loop();
 		} else if( mode == Mode.MOVE_VERTEX ) {
