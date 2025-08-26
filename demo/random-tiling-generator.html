@@ -5,7 +5,6 @@
 <link rel="icon" href="../favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="../favicon.svg">
 <script src="p5.min.js"></script>
-<script src="quicksettings.min.js"></script>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -84,11 +83,25 @@
   <div class="controls-section">
     <h2>Controls:</h2>
     <div style="margin: 15px 0;">
-      <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+      <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; margin-bottom: 15px;">
         <input type="checkbox" id="animation-toggle" checked style="transform: scale(1.2);">
         <span style="font-weight: bold;">Enable Animation</span>
         <span style="font-size: 0.9em; color: #666;">(tiles drift slowly across the canvas)</span>
       </label>
+      
+      <button id="new-curves-btn" style="
+        padding: 12px 20px; 
+        font-size: 16px; 
+        font-weight: bold;
+        background-color: #007acc; 
+        color: white; 
+        border: none; 
+        border-radius: 6px; 
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      " onmouseover="this.style.backgroundColor='#005fa3'" onmouseout="this.style.backgroundColor='#007acc'">
+        🎨 New Random Curves
+      </button>
       
     </div>
   </div>
