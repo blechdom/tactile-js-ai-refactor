@@ -15,6 +15,7 @@
 import { EdgeShape } from '../lib/constants/EdgeShape.js';
 import { tilingTypes } from '../lib/constants/TilingTypes.js';
 import { IsohedralTiling, mul } from '../lib/core/IsohedralTiling.js';
+import { RGB_MAX, ANIMATION_SPEED, BEZIER_CURVE_RANGE, HALF } from './shared/Constants.js';
 
 function drawRandomTiling()
 {
@@ -27,9 +28,9 @@ function drawRandomTiling()
 	let cols = [];
 	for( let i = 0; i < 3; ++i ) {
 		cols.push( 'rgb(' +
-			Math.floor( Math.random() * 255.0 ) + ',' +
-			Math.floor( Math.random() * 255.0 ) + ',' +
-			Math.floor( Math.random() * 255.0 ) + ')' );
+			Math.floor( Math.random() * RGB_MAX ) + ',' +
+			Math.floor( Math.random() * RGB_MAX ) + ',' +
+			Math.floor( Math.random() * RGB_MAX ) + ')' );
 	}
 
 	ctx.lineWidth = 1.0;
@@ -101,7 +102,7 @@ function makeRandomTiling()
 	// Randomize the tiling vertex parameters
 	let ps = tiling.getParameters();
 	for( let i = 0; i < ps.length; ++i ) {
-		ps[i] += Math.random() * 0.1 - 0.05;
+		ps[i] += Math.random() * (2 * ANIMATION_SPEED) - ANIMATION_SPEED;
 	}
 	tiling.setParameters( ps );
 
@@ -120,13 +121,13 @@ function makeRandomTiling()
 		if( shp == EdgeShape.I ) {
 			// Pass - straight edge needs no control points
 		} else if( shp == EdgeShape.J ) {
-			ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
-			ej.push( { x: Math.random()*0.6 + 0.4, y : Math.random() - 0.5 } );
+			ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
+			ej.push( { x: Math.random()*BEZIER_CURVE_RANGE + 0.4, y : Math.random() - HALF } );
 		} else if( shp == EdgeShape.S ) {
-			ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
+			ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
 			ej.push( { x: 1.0 - ej[0].x, y: -ej[0].y } );
 		} else if( shp == EdgeShape.U ) {
-			ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
+			ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
 			ej.push( { x: 1.0 - ej[0].x, y: ej[0].y } );
 		}
 

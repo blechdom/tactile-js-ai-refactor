@@ -14,13 +14,14 @@ import { EdgeShape } from '../lib/constants/EdgeShape.js';
 import { tilingTypes } from '../lib/constants/TilingTypes.js';
 import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.js';
 import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
+import { PHYSICAL_UNIT, RGB_MAX, UI_BACKGROUND, STROKE_WEIGHT_THIN, UI_FILL_LIGHT } from './shared/Constants.js';
 import { sub, dot, len, ptdist, normalize, inv } from './shared/MathUtils.js';
 import { generateRandomColors } from './shared/ColorUtils.js';
 import { makeBox, hitBox, distToSeg } from './shared/GeometryUtils.js';
 
-let sktch = function( p5c )
+let sketch = function( p5c )
 {
-	let the_type = null;
+	let selectedTilingType = null;
 	let params = null;
 	let tiling = null;
 	let edges = null;
@@ -71,7 +72,7 @@ let sktch = function( p5c )
 
 	let msgs = [];
 	let DEBUG = true;
-	function dbg( s ) {
+	function debugLog( s ) {
 		if( DEBUG ) {
 			msgs.push( s );
 			loop();
@@ -215,7 +216,7 @@ let sktch = function( p5c )
 
 	function setTilingType()
 	{
-		const tp = tilingTypes[ the_type ];
+		const tp = tilingTypes[ selectedTilingType ];
 		tiling.reset( tp );
 		params = tiling.getParameters();
 
@@ -234,16 +235,16 @@ let sktch = function( p5c )
 
 	function nextTilingType()
 	{
-		if( the_type < (tilingTypes.length-1) ) {
-			the_type++;
+		if( selectedTilingType < (tilingTypes.length-1) ) {
+			selectedTilingType++;
 			setTilingType();
 		}
 	}
 
 	function prevTilingType()
 	{
-		if( the_type > 0 ) {
-			the_type--;
+		if( selectedTilingType > 0 ) {
+			selectedTilingType--;
 			setTilingType();
 		}
 	}
@@ -412,7 +413,7 @@ let sktch = function( p5c )
 		for( let i = 0; i < params.length; ++i ) {
 			pg.fill( 200 );
 			pg.stroke( 60 );
-			pg.strokeWeight( 0.5 );
+			pg.strokeWeight( STROKE_WEIGHT_THIN );
 			pg.rect( xx, yy, slide_w, slide_h );
 
 			pg.fill( 60 );
@@ -745,7 +746,7 @@ let sktch = function( p5c )
 		let h = window.innerHeight;
 
 		// Any way to fix this for different devices?
-		phys_unit = 60;
+		phys_unit = PHYSICAL_UNIT;
 
 		edit_button_box = makeBox(
 			0.25 * phys_unit, 0.25 * phys_unit, phys_unit, phys_unit );
@@ -795,20 +796,20 @@ let sktch = function( p5c )
 
 		setupInterface();
 
-		the_type = 0;
+		selectedTilingType = 0;
 
 		let parms = p5c.getURLParams();
 		if( 't' in parms ) {
 			let tt = p5c.int( parms.t );
 			for( let i = 0; i < tilingTypes.length; ++i ) {
 				if( tilingTypes[i] == tt ) {
-					the_type = i;
+					selectedTilingType = i;
 					break;
 				}
 			}
 		}
 
-		const tp = tilingTypes[ the_type ];
+		const tp = tilingTypes[ selectedTilingType ];
 		tiling = new OptimizedIsohedralTiling( tp );
 
 		setTilingType();
@@ -831,12 +832,8 @@ let sktch = function( p5c )
 		p5c.pop();
 	}
 
-	p5c.draw = function()
-	{
-		p5c.background( 255 );
-
-		drawTiling();
-
+	// Helper function: Draw control buttons and icons
+	function drawControlButtons() {
 		drawIcon( drawEditIcon, edit_button_box );
 		drawIcon( drawSaveIcon, save_button_box );
 		drawIcon( drawOutlineIcon, outline_button_box );
@@ -845,15 +842,20 @@ let sktch = function( p5c )
 		if (colorMode) {
 			drawIcon( drawColorIcon, color_button_box );
 		}
+	}
 
-		p5c.fill( 252, 255, 254, 220 );
+	// Helper function: Draw navigation UI
+	function drawNavigationUI() {
+		// Draw navigator background
+		p5c.fill( ...UI_BACKGROUND );
 		p5c.stroke( 0 );
 		p5c.strokeWeight( 4 );
 		p5c.rect( navigator_box.x, navigator_box.y, 
 			navigator_box.w, navigator_box.h, 5 );
 
-		const tt = tilingTypes[ the_type ];
-		const name = ((tt<10)?"IH0":"IH") + tilingTypes[ the_type ];
+		// Draw tiling type name
+		const tt = tilingTypes[ selectedTilingType ];
+		const name = ((tt<10)?"IH0":"IH") + tilingTypes[ selectedTilingType ];
 		p5c.textAlign( p5c.CENTER );
 		p5c.textSize( 0.75 * phys_unit );
 		p5c.fill( 0 );
@@ -861,27 +863,42 @@ let sktch = function( p5c )
 		p5c.text( name, navigator_box.x + 0.5*navigator_box.w,
 			navigator_box.y + 0.75*navigator_box.h );
 			
-		p5c.fill( (the_type > 0) ? 0 : 200 );
+		// Draw navigation arrows
+		p5c.fill( (selectedTilingType > 0) ? 0 : 200 );
 		drawIcon( () => p5c.triangle( 35, 100, 165, 30, 165, 170 ), prev_box );
-		p5c.fill( (the_type < 80) ? 0 : 200 );
+		p5c.fill( (selectedTilingType < 80) ? 0 : 200 );
 		drawIcon( () => p5c.triangle( 165, 100, 35, 30, 35, 170 ), next_box );
+	}
+
+	p5c.draw = function()
+	{
+		p5c.background( RGB_MAX );
+
+		drawTiling();
+		drawControlButtons();
+		drawNavigationUI();
 
 		if( show_controls ) {
 			drawEditor();
 		}
 
+		drawDebugMessages();
+		p5c.noLoop();
+	}
+
+	// Helper function: Draw debug messages
+	function drawDebugMessages() {
 		p5c.fill( 255 );
 		p5c.noStroke();
 		p5c.textSize( 24 );
 		p5c.textAlign( p5c.LEFT );
-		let c = 0;
-		c += 32;
+		
+		let yOffset = 0;
+		yOffset += 32;
 		for( let i = Math.max( 0, msgs.length - 10 ); i < msgs.length; ++i ) {
-			p5c.text( msgs[i], 25, 200+c );
-			c = c + 32;
+			p5c.text( msgs[i], 25, 200 + yOffset );
+			yOffset += 32;
 		}
-
-		p5c.noLoop();
 	}
 
 	function drawSaveIcon()
@@ -973,7 +990,7 @@ let sktch = function( p5c )
 
 	function drawIconBackground()
 	{
-		p5c.fill( 252, 255, 254, 220 );
+		p5c.fill( ...UI_BACKGROUND );
 		p5c.beginShape();
 		p5c.vertex( 180.0, 7.94141 );
 		p5c.vertex( 19.2188, 7.94141 );
@@ -1054,7 +1071,7 @@ let sktch = function( p5c )
 		p5c.colorMode(p5c.RGB, 255);
 		
 		// Draw white center circle
-		p5c.fill(255);
+		p5c.fill(RGB_MAX);
 		p5c.stroke(0);
 		p5c.strokeWeight(2);
 		p5c.ellipse(centerX, centerY, 30, 30);
@@ -1106,4 +1123,4 @@ let sktch = function( p5c )
 	}
 };
 
-let myp5 = new p5( sktch, 'sketch0' );
+let myp5 = new p5( sketch, 'sketch0' );

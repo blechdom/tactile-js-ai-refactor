@@ -12,21 +12,22 @@ import { makeBox, EditableTiling } from './tileinfo.js';
 import { EdgeShape } from '../lib/constants/EdgeShape.js';
 import { tilingTypes } from '../lib/constants/TilingTypes.js';
 import { IsohedralTiling, mul } from '../lib/core/IsohedralTiling.js';
+import { PHYSICAL_UNIT, DEFAULT_CANVAS_WIDTH, DEFAULT_CANVAS_HEIGHT, RGB_MAX, UI_BACKGROUND } from './shared/Constants.js';
 import { generateRandomColors } from './shared/ColorUtils.js';
 
-let sktch = function( p5c )
+let sketch = function( p5c )
 {
 	const editor_box = makeBox( 10, 350, 200, 240 );
-	const phys_unit = 60;
+	const phys_unit = PHYSICAL_UNIT;
 
-	let QS = null;
-	let vals = null;
+	let quickSettingsUI = null;
+	let settingsValues = null;
 
 	let editor_pane = null;
 	let show_controls = true;
 	let zoom = 1.0;
 
-	let the_type = null;
+	let selectedTilingType = null;
 	let tiling = null;
 
 	let dragging = null;
@@ -47,14 +48,30 @@ let sktch = function( p5c )
 		p5c.loop();
 	}
 
-	function toggleColorMode() {
-		colorMode = !colorMode;
+	function toggleColorMode(data) {
+		// Handle different possible data structures
+		if (data && typeof data.value !== 'undefined') {
+			colorMode = data.value;
+		} else if (typeof data === 'boolean') {
+			colorMode = data;
+		} else {
+			// Fallback - just toggle manually
+			colorMode = !colorMode;
+		}
+		
+		// Show/hide Random Colors button based on color mode
+		if (colorMode) {
+			quickSettingsUI.showControl("Random Colors");
+		} else {
+			quickSettingsUI.hideControl("Random Colors");
+		}
+		
 		p5c.loop();
 	}
 
 	function setTilingType()
 	{
-		const tp = tilingTypes[ the_type ];
+		const tp = tilingTypes[ selectedTilingType ];
 		tiling.setType( tp );
 
 		// Generate new colors for each tiling type
@@ -70,33 +87,33 @@ let sktch = function( p5c )
 		// QuickSettings doesn't include a public API for setting the
 		// title of a panel, so reach into the guts and twiddle the
 		// data directly.
-		QS._titleBar.textContent = title;
+		quickSettingsUI._titleBar.textContent = title;
 
 		const np = tiling.numParams();
-		let vals = {};
+		settingsValues = {};
 		for( let idx = 0; idx < 6; ++idx ) {
 			if( idx < np ) {
-				QS.showControl( "v" + idx );
-				vals["v"+idx] = tiling.getParam( idx );
+				quickSettingsUI.showControl( "v" + idx );
+				settingsValues["v"+idx] = tiling.getParam( idx );
 			} else {
-				QS.hideControl( "v" + idx );
+				quickSettingsUI.hideControl( "v" + idx );
 			}
 		}
-		QS.setValuesFromJSON( vals );
+		quickSettingsUI.setValuesFromJSON( settingsValues );
 	}
 
 	function nextTilingType()
 	{
-		if( the_type < (tilingTypes.length-1) ) {
-			the_type++;
+		if( selectedTilingType < (tilingTypes.length-1) ) {
+			selectedTilingType++;
 			setTilingType();
 		}
 	}
 
 	function prevTilingType()
 	{
-		if( the_type > 0 ) {
-			the_type--;
+		if( selectedTilingType > 0 ) {
+			selectedTilingType--;
 			setTilingType();
 		}
 	}
@@ -228,9 +245,9 @@ let sktch = function( p5c )
 	function slide()
 	{
 		let params = []
-		vals = QS.getValuesAsJSON();
+		settingsValues = quickSettingsUI.getValuesAsJSON();
 		for( let idx = 0; idx < tiling.numParams(); ++idx ) {
-			params.push( vals[ "v" + idx ] );
+			params.push( settingsValues[ "v" + idx ] );
 		}
 		tiling.setParams( params );
 		p5c.loop();
@@ -290,9 +307,9 @@ let sktch = function( p5c )
 		} else if( p5c.key == ' ' ) {
 			show_controls = !show_controls;
 			if( show_controls ) {
-				QS.expand();
+				quickSettingsUI.expand();
 			} else {
-				QS.collapse();
+				quickSettingsUI.collapse();
 			}
 			p5c.loop();
 		} else if( p5c.key == ',' || p5c.key == '<' ) {
@@ -306,36 +323,41 @@ let sktch = function( p5c )
 
 	p5c.setup = function()
 	{
-		let canvas = p5c.createCanvas( 800, 600 );
+		let canvas = p5c.createCanvas( DEFAULT_CANVAS_WIDTH, DEFAULT_CANVAS_HEIGHT );
 		canvas.parent( "sktch" );
 
 		tiling = new EditableTiling( editor_box.w, editor_box.h, phys_unit );
 
 		let res = document.getElementById( "sktch" ).getBoundingClientRect();
-		QS = QuickSettings.create(
+		quickSettingsUI = QuickSettings.create(
 			res.left + window.scrollX + 10, res.top + window.scrollY + 10, 
 			"Tiling: IH01" );
 		for( let idx = 0; idx < 6; ++idx ) {
-			QS.addRange( "v" + idx, 0, 2, 1, 0.0001, null );
-			QS.hideControl( "v" + idx );
+			quickSettingsUI.addRange( "v" + idx, 0, 2, 1, 0.0001, null );
+			quickSettingsUI.hideControl( "v" + idx );
 		}
 		
-		// Add random colors button
-		QS.addButton( "Random Colors", randomizeColors );
+		// Add color/outline toggle first
+		quickSettingsUI.addBoolean( "Color Mode", colorMode, toggleColorMode );
 		
-		// Add color/outline toggle
-		QS.addBoolean( "Color Mode", colorMode, toggleColorMode );
+		// Add random colors button
+		quickSettingsUI.addButton( "Random Colors", randomizeColors );
+		
+		// Initialize Random Colors button visibility based on initial colorMode
+		if (!colorMode) {
+			quickSettingsUI.hideControl("Random Colors");
+		}
 
 		editor_pane = p5c.createGraphics( editor_box.w, editor_box.h );
 
-		QS.setGlobalChangeHandler( slide );
-		the_type = 0;
+		quickSettingsUI.setGlobalChangeHandler( slide );
+		selectedTilingType = 0;
 		setTilingType();
 	}
 
 	p5c.draw = function()
 	{
-		p5c.background( 255 );
+		p5c.background( RGB_MAX );
 
 		drawTiling();
 
@@ -347,4 +369,4 @@ let sktch = function( p5c )
 	}
 }
 
-let myp5 = new p5( sktch, 'sketch0' );
+let myp5 = new p5( sketch, 'sketch0' );

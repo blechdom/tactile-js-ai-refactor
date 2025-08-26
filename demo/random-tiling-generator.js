@@ -6,23 +6,17 @@
  * file "LICENSE" for more information.
  */
 
-console.log('[Random Generator] Module loading...');
-
 import { EdgeShape } from '../lib/constants/EdgeShape.js';
 import { tilingTypes } from '../lib/constants/TilingTypes.js';
 import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.js';
 import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
+import { PARAMETER_VARIATION, PARAMETER_VARIATION_HALF, BEZIER_CURVE_RANGE, HALF, STROKE_WEIGHT_THIN, RGB_MAX } from './shared/Constants.js';
 import { sub, dot, inv } from './shared/MathUtils.js';
 import { generateRandomColors } from './shared/ColorUtils.js';
-	
-console.log('[Random Generator] Imports loaded successfully');
 
-let sktch = function( p5c )
+let sketch = function( p5c )
 {
-	console.log('[Random Generator] sktch function called with p5c:', p5c);
-	console.log('[Random Generator] p5c type:', typeof p5c);
-	
-	let cur_tiling = null;
+	let currentTiling = null;
 	let animationEnabled = true;
 
 	// Import shared math utilities (using p5c.sqrt for len function)
@@ -81,7 +75,7 @@ let sktch = function( p5c )
 		let tiling = new OptimizedIsohedralTiling( tp );
 		let ps = tiling.getParameters();
 		for( let i = 0; i < ps.length; ++i ) {
-			ps[i] += p5c.random() * 0.3 - 0.15;
+			ps[i] += p5c.random() * PARAMETER_VARIATION - PARAMETER_VARIATION_HALF;
 		}
 		tiling.setParameters( ps );
 
@@ -92,13 +86,13 @@ let sktch = function( p5c )
 			if( shp == EdgeShape.I ) {
 				// Pass
 			} else if( shp == EdgeShape.J ) {
-				ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
-				ej.push( { x: Math.random()*0.6 + 0.4, y : Math.random() - 0.5 } );
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE + 0.4, y : Math.random() - HALF } );
 			} else if( shp == EdgeShape.S ) {
-				ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
 				ej.push( { x: 1.0 - ej[0].x, y: -ej[0].y } );
 			} else if( shp == EdgeShape.U ) {
-				ej.push( { x: Math.random()*0.6, y : Math.random() - 0.5 } );
+				ej.push( { x: Math.random()*BEZIER_CURVE_RANGE, y : Math.random() - HALF } );
 				ej.push( { x: 1.0 - ej[0].x, y: ej[0].y } );
 			}
 
@@ -177,7 +171,7 @@ let sktch = function( p5c )
 			inv( matchSeg( O, samp( O, V, W, T.sc, 0.0 ) ) ) );
 
 		p5c.stroke( 0, alpha );
-		p5c.strokeWeight( 0.5 );
+		p5c.strokeWeight( STROKE_WEIGHT_THIN );
 		p5c.strokeJoin( p5c.ROUND );
 		p5c.strokeCap( p5c.ROUND );
 
@@ -216,8 +210,8 @@ let sktch = function( p5c )
 		let canvas = p5c.createCanvas( clientWidth, clientHeight );
 		canvas.parent( "sktch" );
 
-		cur_tiling = createRandomTiling();
-		displayTilingInfo( cur_tiling );
+		currentTiling = createRandomTiling();
+		displayTilingInfo( currentTiling );
 		
 		// Set up animation toggle event listener
 		const animationToggle = document.getElementById('animation-toggle');
@@ -230,14 +224,14 @@ let sktch = function( p5c )
 
 	p5c.draw = function()
 	{
-		p5c.background( 255 );
+		p5c.background( RGB_MAX );
 
-		drawTiling( cur_tiling, 255 );
+		drawTiling( currentTiling, 255 );
 		
 		// Only animate if animation is enabled
 		if (animationEnabled) {
-			cur_tiling.tx += cur_tiling.dx;
-			cur_tiling.ty += cur_tiling.dy;
+			currentTiling.tx += currentTiling.dx;
+			currentTiling.ty += currentTiling.dy;
 		}
 	}
 
@@ -246,19 +240,12 @@ let sktch = function( p5c )
 		// Only respond to clicks within the canvas bounds
 		if (p5c.mouseX >= 0 && p5c.mouseX <= p5c.width && 
 		    p5c.mouseY >= 0 && p5c.mouseY <= p5c.height) {
-			cur_tiling = createRandomTiling();
-			displayTilingInfo( cur_tiling );
+			currentTiling = createRandomTiling();
+			displayTilingInfo( currentTiling );
 		}
 	}
 };
 
-console.log('[Random Generator] Creating p5 instance...');
-console.log('[Random Generator] p5 constructor available:', typeof p5);
-console.log('[Random Generator] window.p5 available:', typeof window.p5);
-
 // Access p5 from window object since we're in a module
 const p5Constructor = window.p5 || p5;
-console.log('[Random Generator] Using p5 constructor:', typeof p5Constructor);
-
-let myp5 = new p5Constructor( sktch, 'sktch' );
-console.log('[Random Generator] p5 instance created:', myp5);
+let myp5 = new p5Constructor( sketch, 'sketch' );

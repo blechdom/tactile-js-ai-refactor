@@ -55,7 +55,7 @@ class EditableTiling
 
 	setType( tp )
 	{
-		this.the_type = tp;
+		this.selectedTilingType = tp;
 		this.tiling = new OptimizedIsohedralTiling( tp );
 		this.params = this.tiling.getParameters();
 
@@ -101,8 +101,6 @@ class EditableTiling
 
 	calcEditorTransform()
 	{
-		console.log( this );
-
 		let xmin = 1e7;
 		let xmax = -1e7;
 		let ymin = 1e7;
