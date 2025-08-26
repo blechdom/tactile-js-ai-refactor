@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tactile.js - Spiral Tilings</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../favicon.svg">
+    <script src="../demo/p5.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .info-section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            max-width: 1000px;
+            margin: 0 auto 20px auto;
+        }
+        .canvas-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        #sktch {
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        h1 {
+            color: #333;
+            margin-top: 0;
+            text-align: center;
+        }
+        .instruction {
+            background-color: #e8f4fd;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 4px solid #007acc;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info-section">
+        <h1>Spiral Tilings</h1>
+        <div class="instruction">
+            <p><strong>Instructions:</strong> Click and drag vertices to edit the tile shape. Adjust spiral parameters to create beautiful Escher-like spiral tilings.</p>
+            <p>This demo allows you to draw spiral tilings interactively. See the <a href="http://isohedral.ca/escher-like-spiral-tilings/" target="_blank">blog post</a> for more information about spiral tilings.</p>
+        </div>
+    </div>
+
+    <div class="canvas-container">
+        <div id="sktch"></div>
+    </div>
+
+    <div class="info-section">
+        <h2>About Spiral Tilings</h2>
+        <p>Spiral tilings are a fascinating class of tilings where the tiles are arranged in spiral patterns around central points. These tilings can create beautiful, hypnotic patterns reminiscent of M.C. Escher's work.</p>
+        <p>This interactive tool allows you to experiment with different tiling types and spiral parameters to create your own unique spiral patterns.</p>
+    </div>
+
+    <script type="module" src="spirals.js"></script>
+</body>
+</html>
