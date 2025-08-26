@@ -279,11 +279,6 @@ let sketch = function( p5c )
 			regenerateCurves(currentTiling);
 			p5c.loop();
 		});
-		quickSettingsUI.addButton("New Random Tiling", function() {
-			curvatureIntensity = quickSettingsUI.getValue("Curvature"); // Keep current curvature setting
-			currentTiling = createRandomTiling();
-			displayTilingInfo( currentTiling );
-		});
 	}
 
 	p5c.draw = function()
@@ -304,6 +299,10 @@ let sketch = function( p5c )
 		// Only respond to clicks within the canvas bounds
 		if (p5c.mouseX >= 0 && p5c.mouseX <= p5c.width && 
 		    p5c.mouseY >= 0 && p5c.mouseY <= p5c.height) {
+			// Preserve current curvature setting when generating new tiling
+			if (quickSettingsUI) {
+				curvatureIntensity = quickSettingsUI.getValue("Curvature");
+			}
 			currentTiling = createRandomTiling();
 			displayTilingInfo( currentTiling );
 		}
