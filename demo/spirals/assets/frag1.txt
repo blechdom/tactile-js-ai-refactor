@@ -1,0 +1,45 @@
+precision highp float;
+
+uniform sampler2D tex;
+uniform vec2 res;
+// uniform vec4 Mv;
+uniform mat3 M;
+uniform bool dual_spiral;
+
+varying vec2 uv;
+
+void main()
+{
+	vec2 asp = vec2( 1.0, res.y / res.x );
+
+	vec2 cen = 0.5 * asp;
+	vec2 v = uv * asp;
+
+	vec2 p = v - cen;
+
+	if( dual_spiral ) {
+		// Dual spiral Möbius transformation
+		float dia = length( res );
+		float c = res.x / dia;
+		float s = res.y / dia;
+
+		mat3 rot = mat3( c, -s, 0.0, s, c, 0.0, 0.0, 0.0, 1.0 );
+		p = (rot*vec3(p,1.0)).xy;
+
+		p = (1.5*p+vec2(0.5,0.0));
+		float l = (p.x-1.0)*(p.x-1.0) + p.y*p.y;
+		p = vec2( (p.x-p.x*p.x-p.y*p.y)/l, p.y/l );
+	}
+	// dual_spiral == false: no transformation (single spiral)
+
+	// Reduce seam visibility by adding small offset to avoid atan discontinuity
+	float angle = atan( p.y, p.x );
+	// Smooth the seam by adding a small random offset based on position
+	float smoothing = sin( p.x * 100.0 + p.y * 100.0 ) * 0.001;
+	angle += smoothing;
+	
+	vec2 merc = vec2( log( length( p ) ), angle );
+
+	vec4 col = texture2D( tex, (M * vec3( merc, 1.0 )).xy );
+	gl_FragColor = col;
+}

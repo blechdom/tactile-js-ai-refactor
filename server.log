@@ -1,0 +1,1162 @@
+nohup: ignoring input
+127.0.0.1 - - [26/Aug/2025 17:52:04] "HEAD / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 17:52:09] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 17:52:10] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 17:52:15] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:52:15] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:52:19] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 17:52:19] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:52:19] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:52:19] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 17:52:19] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 17:52:19] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 17:52:20] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 17:54:29] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 17:54:35] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:35] "GET /safe-refactor/spirals/ HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:35] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:35] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:36] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:36] "GET /safe-refactor/spirals/ HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:36] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:36] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:36] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 17:54:37] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:37] "GET /safe-refactor/spirals/ HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:37] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:37] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:37] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 17:54:37] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:37] "GET /safe-refactor/spirals/ HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:37] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:37] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:37] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 17:54:42] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:42] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:54:47] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:54:47] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:57:34] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 17:57:41] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:57:41] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:57:50] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:57:50] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:57:50] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 17:59:38] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 17:59:38] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 17:59:43] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 17:59:43] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 17:59:43] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 18:00:14] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 18:00:14] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 18:00:14] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 18:00:14] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 18:51:33] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 18:51:38] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 18:51:38] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Aug/2025 18:51:38] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 18:51:38] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 18:51:38] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 18:51:38] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [26/Aug/2025 18:51:41] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 18:51:41] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [26/Aug/2025 18:51:43] code 404, message File not found
+127.0.0.1 - - [26/Aug/2025 18:51:43] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:03:04] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /demo/p5.min.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /lib/constants/EdgeShape.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /lib/core/IsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /lib/constants/TilingTypes.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /demo/shared/GeometryUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /demo/shared/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /lib/data/TilingDataLoader.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /lib/core/TilingType.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /lib/data/TilingData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /favicon.ico HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:03:05] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:23:48] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:23:48] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:23:48] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:23:48] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:25:29] "HEAD /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:25:43] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:25:44] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:25:44] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:25:44] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:39:00] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:39:00] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:39:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:39:00] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:52:51] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:52:51] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:52:51] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:52:51] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:53:11] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:53:11] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:53:11] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:53:11] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:53:30] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:53:30] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:53:30] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:53:30] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:55:36] "GET /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:55:36] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:55:36] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:55:36] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 09:55:36] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 09:55:36] "GET /lib/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 09:55:36] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 09:55:36] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:04:04] "GET /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:04:04] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:04:04] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:04:34] "GET /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:04:34] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:04:34] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:04:34] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:04:34] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:06:05] "GET /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:06:05] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:06:05] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:06:05] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:06:05] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:06:08] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:06:08] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:06:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:08:26] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:08:34] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:08:34] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:08:34] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:08:38] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:09:47] "GET /demo/random-tiling-generator.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:09:47] "GET /demo/random-tiling-generator.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:09:47] "GET /lib/core/OptimizedIsohedralTiling.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:09:47] "GET /demo/shared/Constants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:09:47] "GET /demo/shared/ColorUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:09:47] "GET /lib/data/LazyTilingLoader.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:12:12] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:12:12] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:12:12] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:16:56] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:16:56] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:16:56] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:16:56] "GET /spirals/core/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:16:56] "GET /spirals/core/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:16:56] "GET /spirals/core/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:16:56] "GET /spirals/core/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:16:59] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:16:59] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:17:02] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:17:02] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:17:55] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:17:55] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:17:55] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:17:55] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:17:55] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:17:55] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:17:55] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:17:55] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:17:55] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:18:00] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:18:00] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:18:00] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:18:00] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:19:27] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:19:27] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:19:27] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:19:27] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:19:27] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:19:27] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:19:27] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:19:27] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:19:27] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:22] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:22] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:22] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:20:22] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:20:22] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:22] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:22] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:22] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:22] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:24] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:24] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:20:24] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:20:26] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:26] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:20:26] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:20:28] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:28] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:20:28] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:20:33] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:33] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:20:33] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:20:38] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:20:38] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:20:38] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:20:38] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:21:08] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:21:08] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:21:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:21:08] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:21:08] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:21:08] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:21:08] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:21:08] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:21:08] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:22:43] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:22:43] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:22:43] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:22:43] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:22:43] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:22:43] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:22:43] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:22:43] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:22:43] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:56] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:56] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:23:56] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:23:56] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:23:56] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:56] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:56] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:56] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:56] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:58] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:58] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:23:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:23:59] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:23:59] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:23:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:24:18] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:24:18] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:24:18] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:24:18] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:25:44] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:25:44] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:25:44] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:25:44] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:25:44] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:25:44] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:25:44] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:25:44] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:25:44] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:27:12] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:27:12] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:27:12] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:27:12] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:27:12] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:27:12] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:27:12] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:27:12] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:27:12] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:28:27] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:28:27] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:28:27] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:28:27] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:28:27] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:28:27] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:28:28] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:28:28] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:28:28] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:29:15] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:29:15] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:29:15] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:29:15] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:29:15] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:29:15] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:29:15] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:31:06] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:31:06] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:31:06] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:31:06] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:31:06] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:31:06] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:31:06] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:31:06] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:31:06] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:32:55] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:32:55] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:32:55] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:32:55] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:32:55] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:32:55] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:32:55] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:32:55] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:32:55] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:34:19] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:34:19] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:34:19] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:34:19] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:35:25] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:35:25] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:35:25] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:35:25] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:35:25] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:35:25] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:35:25] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:35:25] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:35:25] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:35:30] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:35:30] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:35:30] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:35:30] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:49:45] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:49:50] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:49:50] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:50:59] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:50:59] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:50:59] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/core/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/core/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/core/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:56:35] "GET /spirals/core/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:57:10] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:57:10] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 10:57:10] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:57:10] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 10:59:14] "GET /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:59:14] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:59:14] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:59:14] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:59:14] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 10:59:15] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 10:59:15] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:05:19] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:05:21] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:05:21] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:05:21] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:05:44] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:05:44] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:05:44] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:05:44] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:05:44] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:07:45] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:07:46] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:07:46] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:07:46] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:07:46] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:07:46] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:07:46] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:07:46] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:07:46] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:07:46] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:08:22] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:08:22] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:08:22] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:08:22] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:08:22] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:08:31] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:08:31] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:08:31] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:08:31] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:08:31] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:10:29] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:12:42] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:13:43] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:13:43] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:13:43] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:13:43] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:13:43] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:13:43] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:06] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:25] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:25] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:15:25] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:15:25] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:15:25] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:23:36] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:13] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:13] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:26:13] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:26:13] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:26:14] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:38] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:31:38] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:31:42] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:42:18] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:43:56] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:43:56] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:43:56] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:43:56] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:43:56] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:43:56] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:43:58] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:43:58] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:43:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:43:58] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:43:58] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:45:42] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:48:14] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:51:03] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:53:10] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:55:35] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:56:46] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:56:46] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:56:46] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:56:46] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:56:46] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:56:46] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:56:46] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:56:53] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:56:53] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:56:53] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:56:53] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:57:41] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:57:41] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 11:57:41] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 11:57:41] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 11:57:41] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:57:41] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:57:41] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 11:57:41] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:41:19] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:46:09] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:46:09] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:46:10] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:46:10] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:46:10] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:46:54] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:46:55] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:46:55] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:46:56] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:49:57] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:49:57] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:49:57] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:49:57] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:49:57] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:52:16] "GET /spirals/ HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:52:16] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:52:16] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:52:16] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:52:16] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:22] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/ HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:30] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:50] "GET / HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:53:50] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:53:50] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:53:53] "GET /spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:53:53] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:53:53] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:53:53] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:57:02] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:57:03] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:57:03] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:57:03] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 13:57:03] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:57:09] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:57:09] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:57:09] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:58:06] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 13:58:06] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 13:58:06] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 13:58:06] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:02:56] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:02:56] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:02:56] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:02:56] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:02:56] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:05:31] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:05:32] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:05:32] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:05:32] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:05:32] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:05:32] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:05:32] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:05:37] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:05:37] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:05:37] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:05:37] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:06:05] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:06:05] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:06:05] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:06:05] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:06:05] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:06:34] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:06:34] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:06:34] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:06:34] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:11:27] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:13:50] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:13:50] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:13:50] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:13:50] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:21:04] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:21:04] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:21:04] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:21:04] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:21:04] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:21:17] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:21:17] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:21:17] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:21:17] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:21:53] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:21:54] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:21:54] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:21:54] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:24:17] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:24:17] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:24:17] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:24:17] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:25:37] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:25:37] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:25:37] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:25:37] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:25:37] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:25:37] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:25:37] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:25:40] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:25:40] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:25:40] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:25:40] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:26:21] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:26:21] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:26:21] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:26:21] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:26:21] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:29:13] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:29:19] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:30:57] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:30:57] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:30:57] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:30:57] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:30:57] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:32:50] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:32:50] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:32:50] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:32:50] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:32:50] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:34] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:35:34] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:34] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:35:34] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:35:34] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:35:34] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:35:42] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:40:08] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:40:08] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:40:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:40:08] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:40:08] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:43:17] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:43:17] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:43:17] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:43:17] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:43:17] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:43:17] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:46:41] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:46:41] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:46:41] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:46:41] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:46:41] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:51:19] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:51:19] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:51:19] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:51:19] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:51:20] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:51:20] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:53:10] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:53:11] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:53:11] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:53:11] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:53:11] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:53:11] "GET /spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:53:11] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:53:11] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:53:11] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:54:55] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:54:55] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:54:55] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:54:55] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 14:54:55] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:55:01] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:55:01] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 14:55:01] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 14:55:01] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:55:01] "GET /spirals/data/Permutation.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:55:01] "GET /spirals/data/StateData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:55:01] "GET /spirals/data/TouchData.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 14:55:01] "GET /spirals/data/Colouring.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/fit-curve.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/earcut.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/utils/MathUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/assets/vert1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:44] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:00:47] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:02:43] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:02:43] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:02:43] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:02:43] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:02:43] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:04:43] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:04:43] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:04:43] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:04:43] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:04:43] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:05:51] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:05:51] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:05:51] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:05:51] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:07:34] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:07:34] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:07:34] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:07:34] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:07:34] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:08:35] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:08:35] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:08:35] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:08:35] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:08:35] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:12:54] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:12:54] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:12:54] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:12:54] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:12:55] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:14:56] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:14:56] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:14:56] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:14:56] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:08] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:19:08] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:19:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:19:08] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:08] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:19:08] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:19:08] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:19:35] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:23:08] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:23:08] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:23:08] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:23:08] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:23:08] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:25:21] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:25:21] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:25:21] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:25:21] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:26:58] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:26:58] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:26:58] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:26:58] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:26:58] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:27:20] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:27:20] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:27:20] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:27:20] "GET /spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:31:57] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:31:57] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:31:57] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:31:57] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:31:57] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:31:57] "GET /spirals/assets/frag1.txt HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:34:13] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:35:39] "GET /spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:35:39] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:32] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /lib/tactile.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /lib/constants/EdgeShape.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /lib/constants/TilingTypes.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /lib/data/TilingData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /lib/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:37:49] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:17] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:19] "GET /LICENSE HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/lib/tactile.js HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:33] "GET /demo/spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:37] "GET /demo/spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:44:37] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:44:37] "GET /demo/lib/tactile.js HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:44:38] "GET /demo/spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:44:38] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:44:38] "GET /demo/lib/tactile.js HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:44:40] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:44:40] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/index.html HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/p5.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/earcut.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/utils/MathUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/constants/SpiralConstants.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/fit-curve.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/utils/UIUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/lib/tactile.js HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/handlers/EventHandlers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/setup/ParameterSetup.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/utils/SpiralMathHelpers.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/shared/ColorUtils.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/data/Permutation.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/data/Colouring.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/data/TouchData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /favicon.ico HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:44:43] "GET /demo/spirals/data/StateData.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:46:36] "GET /demo/spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:46:36] code 404, message File not found
+127.0.0.1 - - [27/Aug/2025 15:46:36] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+127.0.0.1 - - [27/Aug/2025 15:46:36] "GET /demo/spirals/spirals.js HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:46:36] "GET /demo/spirals/utils/UIUtils.js HTTP/1.1" 304 -
+127.0.0.1 - - [27/Aug/2025 15:46:36] "GET /demo/spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:46:36] "GET /demo/spirals/assets/vert1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [27/Aug/2025 15:46:36] "GET /demo/spirals/assets/frag1.txt HTTP/1.1" 200 -
