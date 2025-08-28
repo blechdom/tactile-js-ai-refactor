@@ -61,10 +61,10 @@ This directory contains browser-based demonstrations of the refactored Tactile-J
    ```
 
 2. **Open in your browser**:
-   - **🎉 Full Tiling Demo**: http://localhost:8888/demo/full-tiling-demo.html ⭐ **COMPLETE**
-   - Working Demo: http://localhost:8888/demo/working-demo.html
-   - Simple Demo: http://localhost:8888/demo/simple-demo.html
-   - Advanced Demo: http://localhost:8888/demo/advanced-demo.html
+   - **🎉 Full Tiling Demo**: http://localhost:8888/graphics/full-tiling-demo.html ⭐ **COMPLETE**
+   - Working Demo: http://localhost:8888/graphics/working-demo.html
+   - Simple Demo: http://localhost:8888/graphics/simple-demo.html
+   - Advanced Demo: http://localhost:8888/graphics/advanced-demo.html
 
 ## Demo Features Explained
 
