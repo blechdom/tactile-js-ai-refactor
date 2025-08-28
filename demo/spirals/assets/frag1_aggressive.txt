@@ -1,0 +1,48 @@
+precision highp float;
+
+uniform sampler2D tex;
+uniform vec2 res;
+uniform mat3 M;
+uniform bool dual_spiral;
+
+varying vec2 uv;
+
+void main()
+{
+	vec2 asp = vec2( 1.0, res.y / res.x );
+	vec2 cen = 0.5 * asp;
+	vec2 v = uv * asp;
+	vec2 p = v - cen;
+
+	if( dual_spiral ) {
+		float dia = length( res );
+		float c = res.x / dia;
+		float s = res.y / dia;
+
+		mat3 rot = mat3( c, -s, 0.0, s, c, 0.0, 0.0, 0.0, 1.0 );
+		p = (rot*vec3(p,1.0)).xy;
+
+		p = (1.5*p+vec2(0.5,0.0));
+		float l = (p.x-1.0)*(p.x-1.0) + p.y*p.y;
+		p = vec2( (p.x-p.x*p.x-p.y*p.y)/l, p.y/l );
+	}
+
+	// AGGRESSIVE smoothing approach
+	float angle = atan( p.y, p.x );
+	float r = length(p);
+	
+	// Very strong multi-frequency smoothing
+	float smooth = sin( p.x * 150.0 + p.y * 120.0 ) * 0.025 +
+				   cos( angle * 8.0 + r * 200.0 ) * 0.02 +
+				   sin( r * 300.0 + angle * 12.0 ) * 0.015 +
+				   cos( p.x * 80.0 - p.y * 60.0 ) * 0.018;
+	
+	angle += smooth;
+	
+	// Large offset to completely move seam location
+	angle += dual_spiral ? 0.3 : 0.25;
+	
+	vec2 merc = vec2( log( length( p ) ), angle );
+	vec4 col = texture2D( tex, (M * vec3( merc, 1.0 )).xy );
+	gl_FragColor = col;
+}

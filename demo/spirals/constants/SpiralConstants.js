@@ -108,12 +108,6 @@ export const SLIDER_CONFIG = {
         DEFAULT: 5,
         STEP: 1
     },
-    COLOR_COUNT: {
-        MIN: 1,
-        MAX: 12,
-        DEFAULT: 6,
-        STEP: 1
-    },
     TILING_TYPE: {
         MIN: 0,
         MAX: 80,

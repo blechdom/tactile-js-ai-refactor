@@ -32,11 +32,33 @@ void main()
 	}
 	// dual_spiral == false: no transformation (single spiral)
 
-	// Reduce seam visibility by adding small offset to avoid atan discontinuity
+	// Mode-specific seam reduction techniques
 	float angle = atan( p.y, p.x );
-	// Smooth the seam by adding a small random offset based on position
-	float smoothing = sin( p.x * 100.0 + p.y * 100.0 ) * 0.001;
-	angle += smoothing;
+	
+	if( dual_spiral ) {
+		// Dual spiral: Multiple disjoint lines - use frequency-based smoothing
+		float r = length(p);
+		float smooth1 = sin( angle * 6.0 + r * 20.0 ) * 0.015;
+		float smooth2 = cos( p.x * 100.0 + p.y * 80.0 ) * 0.008;
+		float smooth3 = sin( r * 150.0 ) * 0.005; // Radial component
+		angle += smooth1 + smooth2 + smooth3;
+		
+		// Add slight rotation offset to shift seams
+		angle += 0.05;
+	} else {
+		// Single spiral: One main seam - gentler, targeted smoothing
+		float smooth1 = sin( p.x * 90.0 + p.y * 70.0 ) * 0.012;
+		float smooth2 = cos( length(p) * 120.0 ) * 0.006;
+		
+		// Targeted smoothing near the main discontinuity
+		float seamDist = abs( mod( angle + 3.14159, 6.28318 ) - 3.14159 );
+		if( seamDist < 0.15 ) {
+			float blend = 1.0 - (seamDist / 0.15);
+			angle += sin( length(p) * 80.0 + angle * 4.0 ) * 0.02 * blend;
+		}
+		
+		angle += smooth1 + smooth2 + 0.08; // Offset main seam
+	}
 	
 	vec2 merc = vec2( log( length( p ) ), angle );
 
