@@ -13,17 +13,17 @@ import { earcut } from './earcut.js'
 import { mul, matchSeg, EdgeShape, numTypes, tilingTypes, IsohedralTiling } 
 	from '../../lib/tactile.js';
 import { MODES, SPIRAL_DEFAULTS, GRAPHICS, UI, INITIAL_STATE, COLS, SVG_CONSTANTS, 
-         TILING_PARAMS, SLIDER_CONFIG, BUTTON_CONFIG } from './constants/SpiralConstants.js';
-import { sub, dot, len, ptdist, inv, normalize, scaleVec, distToSeg } from './utils/MathUtils.js';
-import { makeBox, hitBox, setLabelStyle } from './utils/UIUtils.js';
-import { doHelp, toggleFullscreenLogic, toggleColourLogic, toggleAnimationLogic, doSaveLogic } from './handlers/EventHandlers.js';
-import { handleParameterChanged, handleTilingTypeChanged, handleSpiralChanged } from './setup/ParameterSetup.js';
-import { spiral, section, sample_edge } from './utils/SpiralMathHelpers.js';
+         TILING_PARAMS, SLIDER_CONFIG, BUTTON_CONFIG } from '../../lib/constants/SpiralConstants.js';
+import { sub, dot, len, ptdist, inv, normalize, scaleVec, distToSeg } from '../../lib/utils/MathUtils.js';
+import { makeBox, hitBox, setLabelStyle } from '../../lib/utils/UIUtils.js';
+import { doHelp, toggleFullscreenLogic, toggleColourLogic, toggleAnimationLogic, doSaveLogic } from '../../lib/handlers/EventHandlers.js';
+import { handleParameterChanged, handleTilingTypeChanged, handleSpiralChanged } from '../../lib/setup/ParameterSetup.js';
+import { spiral, section, sample_edge } from '../../lib/utils/SpiralMathHelpers.js';
 import { randomizeColors } from '../shared/ColorUtils.js';
-import { Permutation } from './data/Permutation.js';
-import { Colouring, UniformColouring, MinColouring } from './data/Colouring.js';
-import { TouchDataManager } from './data/TouchData.js';
-import { StateDataManager } from './data/StateData.js';
+import { Permutation } from '../../lib/data/Permutation.js';
+import { Colouring, UniformColouring, MinColouring } from '../../lib/data/Colouring.js';
+import { TouchDataManager } from '../../lib/data/TouchData.js';
+import { StateDataManager } from '../../lib/data/StateData.js';
 
 function sktch( p5c )
 {
@@ -111,6 +111,9 @@ function sktch( p5c )
 	// Additional controls
 	let show_outlines_in_color_mode = false; // Toggle outlines in color mode
 	let color_outline_button = null;
+
+	// Interactive tile color (always random, even in outline mode)
+	let interactiveColor = [255, 100, 100]; // Default color
 
 	// COLS and SVG constants imported from SpiralConstants.js
 
@@ -238,6 +241,9 @@ function sktch( p5c )
 		if( colour && min_colouring ) {
 			randomizeColors( min_colouring.cols );
 		}
+
+		// Always randomize interactive tile color (works in both modes)
+		randomizeInteractiveColor();
 
 		edges = [];
 		for( let idx = 0; idx < tiling.numEdgeShapes(); ++idx ) {
@@ -552,8 +558,8 @@ function sktch( p5c )
 		p5c.rect( 0, 0, WIDTH/2, HEIGHT/2 );
 
 		// Use a random color from the current palette for the interactive shape
-		const interactiveColor = colour && min_colouring ? min_colouring.cols[0] : COLS[3];
-		p5c.fill( interactiveColor[0], interactiveColor[1], interactiveColor[2] );
+		const colorToUse = colour && min_colouring ? min_colouring.cols[0] : interactiveColor;
+		p5c.fill( colorToUse[0], colorToUse[1], colorToUse[2] );
 
 		let tshape = [];
 
@@ -1172,6 +1178,15 @@ function sktch( p5c )
 			drawTranslationalUnit();
 			p5c.loop();
 		}
+	}
+
+	// Randomize interactive tile color (works in both outline and color mode)
+	function randomizeInteractiveColor() {
+		interactiveColor = [
+			Math.floor(Math.random() * 256),
+			Math.floor(Math.random() * 256), 
+			Math.floor(Math.random() * 256)
+		];
 	}
 
 	// Toggle outlines in color mode

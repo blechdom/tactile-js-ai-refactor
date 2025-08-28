@@ -12,29 +12,15 @@ import { EdgeShape } from '../lib/constants/EdgeShape.js';
 import { tilingTypes } from '../lib/constants/TilingTypes.js';
 import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.js';
 import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
-import { sub, dot, len, ptdist, normalize, inv } from './shared/MathUtils.js';
+import { sub, dot, len, ptdist, normalize, inv, distToSeg } from '../lib/utils/MathUtils.js';
 
 // A collection of utilities and classes that are generally useful when
 // displaying and manipulating isohedral tilings interactively.
 
 // Shortest distance from point P to line segment AB.
-function distToSeg( P, A, B )
-{
-	const qmp = sub( B, A );
-	const t = dot( sub( P, A ), qmp ) / dot( qmp, qmp );
-	if( (t >= 0.0) && (t <= 1.0) ) {
-		return len( sub( P, { x: A.x + t*qmp.x, y : A.y + t*qmp.y } ) );
-	} else if( t < 0.0 ) {
-		return len( sub( P, A ) );
-	} else {
-		return len( sub( P, B ) );
-	}
-}
+// distToSeg function now imported from '../lib/utils/MathUtils.js'
 
-function makeBox( x, y, w, h )
-{
-	return { x: x, y: y, w: w, h: h };
-}
+// makeBox function now imported from '../lib/utils/UIUtils.js'
 
 function hitBox( x, y, B )
 {
@@ -259,8 +245,6 @@ export {
 	ptdist,
 	normalize,
 	inv,
-	distToSeg,
-	makeBox,
 	hitBox,
 	EditableTiling
 };

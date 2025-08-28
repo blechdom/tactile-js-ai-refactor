@@ -8,11 +8,13 @@
 
 // A port of the Tactile C++ demo program to P5.js.
 
-import { makeBox, EditableTiling } from './tileinfo.js';
+import { EditableTiling } from './tileinfo.js';
+import { makeBox } from '../lib/utils/UIUtils.js';
 import { EdgeShape } from '../lib/constants/EdgeShape.js';
 import { tilingTypes } from '../lib/constants/TilingTypes.js';
 import { IsohedralTiling, mul } from '../lib/core/IsohedralTiling.js';
 import { PHYSICAL_UNIT, DEFAULT_CANVAS_WIDTH, DEFAULT_CANVAS_HEIGHT, RGB_MAX, UI_BACKGROUND } from './shared/Constants.js';
+import { COLS } from '../lib/constants/SpiralConstants.js';
 import { generateRandomColors } from './shared/ColorUtils.js';
 
 let sketch = function( p5c )
@@ -33,18 +35,13 @@ let sketch = function( p5c )
 	let dragging = null;
 	let colorMode = true; // true = colors, false = outlines only
 
-	let COLS = [
-		[ 25, 52, 65 ],
-		[ 62, 96, 111 ],
-		[ 145, 170, 157 ],
-		[ 209, 219, 189 ],
-		[ 252, 255, 245 ],
-		[ 219, 188, 209 ] ];
+	// Create a local copy of COLS that can be modified at runtime
+	let localCOLS = [...COLS.map(color => [...color])];
 
 	// Using shared generateRandomColors utility
 
 	function randomizeColors() {
-		COLS = generateRandomColors(6);
+		localCOLS = generateRandomColors(6);
 		p5c.loop();
 	}
 
@@ -75,7 +72,7 @@ let sketch = function( p5c )
 		tiling.setType( tp );
 
 		// Generate new colors for each tiling type
-		COLS = generateRandomColors(6);
+		localCOLS = generateRandomColors(6);
 
 		let title = "Tiling: IH";
 		if( tp < 10 ) {
@@ -136,9 +133,9 @@ let sketch = function( p5c )
 
 			if (colorMode) {
 				// Color mode - use color fills
-				const col = COLS[ proto.getColour( i.t1, i.t2, i.aspect ) + 1 ];
+				const col = localCOLS[ proto.getColour( i.t1, i.t2, i.aspect ) + 1 ];
 				p5c.fill( col[0], col[1], col[2] );
-				p5c.stroke( COLS[0][0], COLS[0][1], COLS[0][2] );
+				p5c.stroke( localCOLS[0][0], localCOLS[0][1], localCOLS[0][2] );
 				p5c.strokeWeight( 1.0 );
 			} else {
 				// Outline mode - black and white only
@@ -166,7 +163,7 @@ let sketch = function( p5c )
 		pg.rect( 0, 0, editor_box.w, editor_box.h );
 
 		pg.strokeWeight( 2.0 );
-		pg.fill( COLS[3][0], COLS[3][1], COLS[3][2] );
+		pg.fill( localCOLS[3][0], localCOLS[3][1], localCOLS[3][2] );
 
 		const ET = tiling.getEditorTransform();
 		const proto = tiling.getPrototile();
@@ -225,9 +222,9 @@ let sketch = function( p5c )
 			// Draw symmetry points for U and S edges.
 			if( !i.second ) {
 				if( shp == EdgeShape.U ) {
-					pg.fill( COLS[2][0], COLS[2][1], COLS[2][2] );
+					pg.fill( localCOLS[2][0], localCOLS[2][1], localCOLS[2][2] );
 				} else {
-					pg.fill( COLS[5][0], COLS[5][1], COLS[5][2] );
+					pg.fill( localCOLS[5][0], localCOLS[5][1], localCOLS[5][2] );
 				}
 				const pt = mul( T, ej[ej.length-1] );
 				pg.ellipse( pt.x, pt.y, 10.0, 10.0 );

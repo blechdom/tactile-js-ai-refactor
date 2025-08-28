@@ -5,15 +5,9 @@
 
 'use strict';
 
-// Default color palette used across demos
-export const DEFAULT_COLORS = [
-    [25, 52, 65],
-    [62, 96, 111],
-    [145, 170, 157],
-    [209, 219, 189],
-    [252, 255, 245],
-    [219, 188, 209]
-];
+// Default color palette is now imported from lib/constants/SpiralConstants.js as COLS
+import { COLS as DEFAULT_COLORS } from '../../lib/constants/SpiralConstants.js';
+export { DEFAULT_COLORS };
 
 // Generate random color palette
 export function generateRandomColors(numColors = 6) {

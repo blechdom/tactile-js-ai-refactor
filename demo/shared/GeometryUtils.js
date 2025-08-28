@@ -5,32 +5,14 @@
 
 'use strict';
 
-// Create a rectangular box/bounds object
-export function makeBox(x, y, w, h) {
-    return { x: x, y: y, w: w, h: h };
-}
+// makeBox function moved to lib/utils/UIUtils.js to eliminate duplication
 
 // Test if point (x,y) hits box B
 export function hitBox(x, y, B) {
     return (x >= B.x) && (x <= (B.x + B.w)) && (y >= B.y) && (y <= (B.y + B.h));
 }
 
-// Calculate distance from point P to line segment AB
-export function distToSeg(P, A, B) {
-    const qmp = { x: B.x - A.x, y: B.y - A.y };
-    const t = ((P.x - A.x) * qmp.x + (P.y - A.y) * qmp.y) / (qmp.x * qmp.x + qmp.y * qmp.y);
-    if ((t >= 0.0) && (t <= 1.0)) {
-        const proj = { x: A.x + t * qmp.x, y: A.y + t * qmp.y };
-        const diff = { x: P.x - proj.x, y: P.y - proj.y };
-        return Math.sqrt(diff.x * diff.x + diff.y * diff.y);
-    } else if (t < 0.0) {
-        const diff = { x: P.x - A.x, y: P.y - A.y };
-        return Math.sqrt(diff.x * diff.x + diff.y * diff.y);
-    } else {
-        const diff = { x: P.x - B.x, y: P.y - B.y };
-        return Math.sqrt(diff.x * diff.x + diff.y * diff.y);
-    }
-}
+// distToSeg function moved to lib/utils/MathUtils.js to eliminate duplication
 
 // Calculate bounds of a set of points
 export function calculateBounds(points) {

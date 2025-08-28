@@ -11,7 +11,7 @@ import { tilingTypes } from '../lib/constants/TilingTypes.js';
 import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.js';
 import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
 import { PARAMETER_VARIATION, PARAMETER_VARIATION_HALF, BEZIER_CURVE_RANGE, HALF, STROKE_WEIGHT_THIN, RGB_MAX } from './shared/Constants.js';
-import { sub, dot, inv } from './shared/MathUtils.js';
+import { sub, dot, inv, len } from '../lib/utils/MathUtils.js';
 import { generateRandomColors } from './shared/ColorUtils.js';
 
 let sketch = function( p5c )
@@ -19,8 +19,7 @@ let sketch = function( p5c )
 	let currentTiling = null;
 	let animationEnabled = true;
 
-	// Import shared math utilities (using p5c.sqrt for len function)
-	function len( V ) { return p5c.sqrt( V.x*V.x + V.y*V.y ); }
+	// Math utilities now imported from lib/utils/MathUtils.js
 
 	function displayTilingInfo(tilingData) 
 	{

@@ -16,9 +16,11 @@ import { OptimizedIsohedralTiling } from '../lib/core/OptimizedIsohedralTiling.j
 import { mul, matchSeg } from '../lib/core/IsohedralTiling.js';
 import { TILING_TYPE_DEFINITIONS } from '../lib/data/TilingData.js';
 import { PHYSICAL_UNIT, RGB_MAX, UI_BACKGROUND, STROKE_WEIGHT_THIN, UI_FILL_LIGHT } from './shared/Constants.js';
-import { sub, dot, len, ptdist, normalize, inv } from './shared/MathUtils.js';
+import { COLS } from '../lib/constants/SpiralConstants.js';
+import { sub, dot, len, ptdist, normalize, inv } from '../lib/utils/MathUtils.js';
 import { generateRandomColors } from './shared/ColorUtils.js';
-import { makeBox, hitBox, distToSeg } from './shared/GeometryUtils.js';
+import { makeBox, hitBox } from '../lib/utils/UIUtils.js';
+import { distToSeg } from '../lib/utils/MathUtils.js';
 
 let sketch = function( p5c )
 {
@@ -80,18 +82,13 @@ let sketch = function( p5c )
 		}
 	}
 
-	let COLS = [
-		[ 25, 52, 65 ],
-		[ 62, 96, 111 ],
-		[ 145, 170, 157 ],
-		[ 209, 219, 189 ],
-		[ 252, 255, 245 ],
-		[ 219, 188, 209 ] ];
+	// Create a local copy of COLS that can be modified at runtime
+	let localCOLS = [...COLS.map(color => [...color])];
 
 	// Using shared generateRandomColors utility
 
 	function randomizeColors() {
-		COLS = generateRandomColors(6);
+		localCOLS = generateRandomColors(6);
 		p5c.loop();
 	}
 
@@ -230,7 +227,7 @@ let sketch = function( p5c )
 		});
 
 		// Generate new colors for each tiling type
-		COLS = generateRandomColors(6);
+		localCOLS = generateRandomColors(6);
 
 		edges = [];
 		for( let idx = 0; idx < tiling.numEdgeShapes(); ++idx ) {
@@ -293,9 +290,9 @@ let sketch = function( p5c )
 
 			if (colorMode) {
 				// Color mode - use color fills
-				const col = COLS[ tiling.getColour( i.t1, i.t2, i.aspect ) + 1 ];
+				const col = localCOLS[ tiling.getColour( i.t1, i.t2, i.aspect ) + 1 ];
 				p5c.fill( col[0], col[1], col[2] );
-				p5c.stroke( COLS[0][0], COLS[0][1], COLS[0][2] );
+				p5c.stroke( localCOLS[0][0], localCOLS[0][1], localCOLS[0][2] );
 				p5c.strokeWeight( 1.0 );
 			} else {
 				// Outline mode - black and white only
@@ -348,7 +345,7 @@ let sketch = function( p5c )
 		pg.rect( 0, 0, edit_box.w, edit_box.h );
 
 		pg.strokeWeight( 2.0 );
-		pg.fill( COLS[3][0], COLS[3][1], COLS[3][2] );
+		pg.fill( localCOLS[3][0], localCOLS[3][1], localCOLS[3][2] );
 
 		pg.beginShape();
 		for( let v of tile_shape ) {
@@ -404,9 +401,9 @@ let sketch = function( p5c )
 			// Draw symmetry points for U and S edges.
 			if( !i.second ) {
 				if( shp == EdgeShape.U ) {
-					pg.fill( COLS[2][0], COLS[2][1], COLS[2][2] );
+					pg.fill( localCOLS[2][0], localCOLS[2][1], localCOLS[2][2] );
 				} else {
-					pg.fill( COLS[5][0], COLS[5][1], COLS[5][2] );
+					pg.fill( localCOLS[5][0], localCOLS[5][1], localCOLS[5][2] );
 				}
 				const pt = mul( T, ej[ej.length-1] );
 				pg.ellipse( pt.x, pt.y, 10.0, 10.0 );
@@ -480,7 +477,7 @@ let sketch = function( p5c )
 			const T = mul( tiling_T, i.T );
 			const svg_T = [ T[0], T[3], T[1], T[4], T[2], T[5] ].map( t => +t.toFixed(3) );
 
-			const col = COLS[ tiling.getColour( i.t1, i.t2, i.aspect ) + 1 ];
+			const col = localCOLS[ tiling.getColour( i.t1, i.t2, i.aspect ) + 1 ];
 			
 			let tile = document.createElementNS( namespace, 'use' );
 			tile.setAttribute( 'xlink:href', '#tile-shape' );
