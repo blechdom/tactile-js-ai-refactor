@@ -102,6 +102,8 @@ function sktch( p5c )
 	let animate_button = null;
 	let save_button = null;
 	let random_color_button = null;
+	let color_count_slider = null;
+	let color_count_label = null;
 	// Removed outline_button - always use adaptive mode
 
 	// Instructional text elements
@@ -285,6 +287,42 @@ function sktch( p5c )
 		const result = handleSpiralChanged(A_slider, A_label, B_slider, B_label, calculateTilingTransform, p5c);
 		spiral_A = result.spiral_A;
 		spiral_B = result.spiral_B;
+	}
+
+	function colorCountChanged() {
+		if( color_count_slider && color_count_label && min_colouring ) {
+			const colorCount = color_count_slider.value();
+			color_count_label.html( "Colors: " + colorCount );
+			
+			// Resize the colors array and generate new colors
+			updateColorCount(colorCount);
+			drawTranslationalUnit();
+			p5c.loop();
+		}
+	}
+
+	function updateColorCount(newCount) {
+		if( !min_colouring || !min_colouring.cols ) {
+			return;
+		}
+
+		// Resize the color array
+		if( newCount > min_colouring.cols.length ) {
+			// Add new random colors
+			while( min_colouring.cols.length < newCount ) {
+				min_colouring.cols.push([
+					Math.floor(Math.random() * 255.0),
+					Math.floor(Math.random() * 255.0),
+					Math.floor(Math.random() * 255.0)
+				]);
+			}
+		} else if( newCount < min_colouring.cols.length ) {
+			// Remove excess colors
+			min_colouring.cols.length = newCount;
+		}
+		
+		// Regenerate all colors for consistency
+		randomizeColors( min_colouring.cols );
 	}
 
 	function getTilingRect( t1, t2 )
@@ -636,7 +674,7 @@ function sktch( p5c )
 
 	function doTouchStarted( id )
 	{
-		for( let b of [help_button, fullscreen_button, colour_button, animate_button, save_button] ) {
+		for( let b of [help_button, fullscreen_button, colour_button, animate_button, save_button, random_color_button, color_outline_button] ) {
 			const pos = b.position();
 			const sz = b.size();
 			const r = makeBox( pos.x, pos.y, sz.width, sz.height );
@@ -864,6 +902,29 @@ function sktch( p5c )
 		B_label.position( WIDTH - 70, HEIGHT/2 - 65 );
 		setLabelStyle( B_label );
 
+		// Color count slider (only visible in color mode)
+		if( color_count_slider == null ) {
+			color_count_slider = p5c.createSlider( SLIDER_CONFIG.COLOR_COUNT.MIN, SLIDER_CONFIG.COLOR_COUNT.MAX, SLIDER_CONFIG.COLOR_COUNT.DEFAULT, SLIDER_CONFIG.COLOR_COUNT.STEP );
+			color_count_slider.input( colorCountChanged );
+		}
+		color_count_slider.position( WIDTH/2 + 20, HEIGHT/2 - 30 );
+		color_count_slider.style( "width", "" + (WIDTH/2-100) + "px" );
+
+		if( color_count_label == null ) {
+			color_count_label = p5c.createSpan( "Colors: 6" );
+		}
+		color_count_label.position( WIDTH - 90, HEIGHT/2 - 35 );
+		setLabelStyle( color_count_label );
+
+		// Show/hide color count slider based on color mode
+		if( colour ) {
+			color_count_slider.show();
+			color_count_label.show();
+		} else {
+			color_count_slider.hide();
+			color_count_label.hide();
+		}
+
 		edit_box = makeBox( 150, 50, WIDTH/2-200, HEIGHT/2-100 );
 
 		if( tv_sliders != null ) {
@@ -1083,6 +1144,7 @@ function sktch( p5c )
 			ih_slider, ih_label, A_slider, A_label, B_slider, B_label,
 			help_button, fullscreen_button, colour_button, animate_button, save_button,
 			random_color_button, color_outline_button,
+			color_count_slider, color_count_label,
 			instruction_text1, instruction_text2
 		].concat(tv_sliders || []);
 
@@ -1130,6 +1192,17 @@ function sktch( p5c )
 				color_outline_button.show();
 			} else {
 				color_outline_button.hide();
+			}
+		}
+
+		// Show/hide color count slider and label based on colour mode
+		if( color_count_slider != null && color_count_label != null ) {
+			if( colour ) {
+				color_count_slider.show();
+				color_count_label.show();
+			} else {
+				color_count_slider.hide();
+				color_count_label.hide();
 			}
 		}
 		
