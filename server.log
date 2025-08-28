@@ -1189,3 +1189,8 @@ nohup: ignoring input
 127.0.0.1 - - [28/Aug/2025 10:33:43] "GET /demo/spirals/assets/helveticaneue.otf HTTP/1.1" 200 -
 127.0.0.1 - - [28/Aug/2025 10:33:43] "GET /demo/spirals/assets/vert1.txt HTTP/1.1" 200 -
 127.0.0.1 - - [28/Aug/2025 10:33:43] "GET /demo/spirals/assets/frag1.txt HTTP/1.1" 200 -
+127.0.0.1 - - [28/Aug/2025 10:34:14] "GET /demo/spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [28/Aug/2025 10:34:14] "GET /demo/spirals/spirals.js HTTP/1.1" 304 -
+127.0.0.1 - - [28/Aug/2025 10:34:14] "GET /demo/spirals/constants/SpiralConstants.js HTTP/1.1" 304 -
+127.0.0.1 - - [28/Aug/2025 10:34:33] "GET /demo/spirals/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [28/Aug/2025 10:34:33] "GET /demo/spirals/spirals.js HTTP/1.1" 200 -

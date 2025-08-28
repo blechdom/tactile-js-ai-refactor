@@ -234,7 +234,24 @@ function sktch( p5c )
 		params = tiling.getParameters();
 
 		uniform_colouring = new UniformColouring( tiling, COLS[ 4 ] );
-		min_colouring = new MinColouring( tiling, COLS.slice( 1, 4 ) );
+		
+		// Initialize with default color count from slider config
+		const initialColorCount = SLIDER_CONFIG.COLOR_COUNT.DEFAULT;
+		const initialColors = [];
+		for( let i = 0; i < initialColorCount; i++ ) {
+			if( i < COLS.length - 1 ) {
+				initialColors.push( COLS[i + 1] ); // Skip COLS[0], use COLS[1], COLS[2], etc.
+			} else {
+				// Generate random colors for additional slots
+				initialColors.push([
+					Math.floor(Math.random() * 255.0),
+					Math.floor(Math.random() * 255.0),
+					Math.floor(Math.random() * 255.0)
+				]);
+			}
+		}
+		
+		min_colouring = new MinColouring( tiling, initialColors );
 		
 		// Randomize colors immediately if in color mode
 		if( colour && min_colouring ) {
@@ -674,12 +691,27 @@ function sktch( p5c )
 
 	function doTouchStarted( id )
 	{
+		// Check all buttons including sliders
 		for( let b of [help_button, fullscreen_button, colour_button, animate_button, save_button, random_color_button, color_outline_button] ) {
-			const pos = b.position();
-			const sz = b.size();
-			const r = makeBox( pos.x, pos.y, sz.width, sz.height );
-			if( hitBox( p5c.mouseX, p5c.mouseY, r ) ) {
-				return false;
+			if( b != null ) {
+				const pos = b.position();
+				const sz = b.size();
+				const r = makeBox( pos.x, pos.y, sz.width, sz.height );
+				if( hitBox( p5c.mouseX, p5c.mouseY, r ) ) {
+					return false;
+				}
+			}
+		}
+
+		// Check sliders separately since they have different position/size properties
+		for( let slider of [ih_slider, A_slider, B_slider, color_count_slider].concat(tv_sliders || []) ) {
+			if( slider != null ) {
+				const pos = slider.position();
+				const sz = slider.size();
+				const r = makeBox( pos.x, pos.y, sz.width, sz.height );
+				if( hitBox( p5c.mouseX, p5c.mouseY, r ) ) {
+					return false;
+				}
 			}
 		}
 
@@ -911,10 +943,17 @@ function sktch( p5c )
 		color_count_slider.style( "width", "" + (WIDTH/2-100) + "px" );
 
 		if( color_count_label == null ) {
-			color_count_label = p5c.createSpan( "Colors: 6" );
+			color_count_label = p5c.createSpan( "Colors: " + SLIDER_CONFIG.COLOR_COUNT.DEFAULT );
 		}
 		color_count_label.position( WIDTH - 90, HEIGHT/2 - 35 );
 		setLabelStyle( color_count_label );
+
+		// Sync slider and label with actual color count
+		if( min_colouring && min_colouring.cols ) {
+			const actualColorCount = min_colouring.cols.length;
+			color_count_slider.value( actualColorCount );
+			color_count_label.html( "Colors: " + actualColorCount );
+		}
 
 		// Show/hide color count slider based on color mode
 		if( colour ) {
