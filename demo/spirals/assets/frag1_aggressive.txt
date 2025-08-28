@@ -46,3 +46,4 @@ void main()
 	vec4 col = texture2D( tex, (M * vec3( merc, 1.0 )).xy );
 	gl_FragColor = col;
 }
+
